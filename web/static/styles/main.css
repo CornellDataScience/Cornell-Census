@@ -1,0 +1,29 @@
+.opening {
+    background-color: #b30b00;
+  
+  }
+  
+  .dot {
+    color: #b30b00;
+  
+  }
+  
+  .mtext {
+    font-family: freight-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  .div-2 {
+    width: 600px;
+  
+  }
+  
+  input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
