@@ -9,3 +9,4 @@ app.config.from_object('config.DevConfig')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+from app import views

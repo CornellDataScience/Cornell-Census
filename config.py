@@ -3,8 +3,8 @@ from os import environ, path
 
 class Config:
     """Base config."""
-    SECRET_KEY = environ.get('SECRET_KEY')
-    SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME')
+    WTF_CSRF_ENABLED = True,
+    SECRET_KEY = 'absalkfjadslk',
     STATIC_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'
     SQLALCHEMY_TRACK_MODIFICATIONS = False

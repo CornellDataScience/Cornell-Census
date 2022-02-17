@@ -20,7 +20,7 @@ def graphs():
     return render_template('graphs.html', labels=labels, values=values)
 
 @app.route('/', methods=['GET', 'POST'])
-def forms():
+def form():
     """
     validates form input and passes arguments to an html file
     """
@@ -37,7 +37,7 @@ def forms():
         db.session.add(new_user)
         db.session.commit()
 
-        conn = sqlite3.connect('web/data.db')
+        conn = sqlite3.connect('app/data.db')
         posts = conn.execute('SELECT * FROM user').fetchall()
         conn.close()
 
