@@ -1,0 +1,137 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+
+  </head>
+  <body>
+    <br>
+    <center><h1>CornellCensus Data</h1></center>
+    <br>
+    <center><h4>Average GPA by College</h4></center>
+    <div style="align-items:center;"><canvas id="myChart" width="1000" height="400" style="margin:0 auto;"></canvas></div>
+    <br>
+    <br>
+    <div style="align-items:center;"><canvas id="myChart2" width="1000" height="400" style="margin:0 auto;"></canvas></div>
+    <br>
+    <div style="align-items:center;"><canvas id="myChart3" width="1000" height="400" style="margin:0 auto;"></canvas></div>
+    <script>
+      Chart.defaults.global.responsive = false;
+      var c1 = '{{ gpas[0] }}';
+      var c2 = '{{ gpas[1] }}';
+      var c3 = '{{ gpas[2] }}';
+      var c4 = '{{ gpas[3] }}';
+      var c5 = '{{ gpas[4] }}';
+
+      var countEng = '{{ counts[0] }}';
+      var countCals = '{{ counts[1] }}';
+      var countCas = '{{ counts[2] }}';
+      var countEco = '{{ counts[3] }}';
+      var countBus = '{{ counts[4] }}';
+
+      var fCount = '{{ years[0] }}';
+      var sCount = '{{ years[1] }}';
+      var jCount = '{{ years[2] }}';
+      var seCount = '{{ years[3] }}';
+
+      var chartData = {
+                    labels: ["College of Engineering", "College of Agriculture & Life Sciences", "College of Arts & Sciences", 
+                  "College of Human Ecology", "SC Johnson School of Business"],
+                    datasets: [
+                      {
+                        data: [c1, c2, c3, c4, c5],
+                        backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                      }
+                    ]
+      }
+
+      var chartData2 = {
+                    labels: ["College of Engineering", "College of Agriculture & Life Sciences", "College of Arts & Sciences", 
+                  "College of Human Ecology", "SC Johnson School of Business"],
+                    datasets: [
+                      {
+                        data: [countEng, countCals, countCas, countEco, countBus],
+                        backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                      }
+                    ]
+      }
+
+      var chartData3 = {
+                    labels: ["Freshman", "Sophomore", "Junior", "Senior"],
+                    datasets: [
+                      {
+                        data: [fCount, sCount, jCount, seCount],
+                        backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                      }
+                    ]
+      }
+
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var ctx2 = document.getElementById("myChart2").getContext("2d");
+      var ctx3 = document.getElementById("myChart3").getContext("2d");
+
+      var options = {
+              tooltips: {
+                enabled: false
+              },
+              plugins: {
+                labels: [
+                        {
+                            render: 'label',
+                            position: 'outside',
+                            fontColor: '#000',
+                            fontSize: 12
+                        },
+                        {
+                            render: 'percentage',
+                            fontColor: '#000',
+                            fontSize: 8,
+                            position: 'border',
+                        }
+                ]
+               }
+};
+
+      // create the chart using the chart canvas
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: chartData,
+        options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }],
+          },
+          plugins: {
+          labels: {
+            render: () => {}
+          }
+        },
+        legend: {
+            display: false
+         }
+}
+      });
+
+      var myChart2 = new Chart(ctx2, {
+        type: 'pie',
+        data: chartData2,
+          options:options
+      });
+
+      var myChart3 = new Chart(ctx3, {
+        type: 'pie',
+        data: chartData3,
+          options:options
+      });
+
+    </script>
+  </body>
+</html> 
+{% endblock %}
