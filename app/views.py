@@ -10,6 +10,10 @@ from flask import Flask, render_template, flash, request
 from app import forms, models, db, app
 import sqlite3
 
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('index.html')
+
 @app.route('/graphs', methods=['GET', 'POST'])
 def graphs():
     """
@@ -19,7 +23,7 @@ def graphs():
     values = [600, 50, 200, 550, 320]
     return render_template('graphs.html', labels=labels, values=values)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/form', methods=['GET', 'POST'])
 def form():
     """
     validates form input and passes arguments to an html file

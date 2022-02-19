@@ -1,0 +1,57 @@
+.logo-div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.intro-text {
+  display: inline-block;
+  width: 600px;
+  vertical-align: middle;
+  color: white;
+}
+
+.div1 {
+  padding-top: 90px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.div2 {
+  padding-top: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.div3 {
+  padding-top: 70px;
+  position: relative;
+  text-align: center;
+}
+
+#grad {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 112, 112),
+    rgb(0, 0, 0)
+  );
+}
+
+.title-text {
+  text-align: center;
+  padding-top: 50px;
+  font-weight: lighter;
+  font-size: 72px;
+  color: white;
+}
+
+p {
+  font-size: 25px;
+}
+
+.foot {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding-bottom: 50px;
+}
