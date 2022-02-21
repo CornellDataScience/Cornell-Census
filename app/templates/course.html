@@ -15,6 +15,8 @@
     <center><h4>Course Enrollment (Spring 2022)</h4></center>
     <div style="align-items:center;"><canvas id="myChart" width="1200" height="500" style="margin:0 auto;"></canvas></div>
     <br>
+    <div style="align-items:center;"><canvas id="myChart2" width="1200" height="500" style="margin:0 auto;"></canvas></div>
+    <br>
    
     <script>
       Chart.defaults.global.responsive = false;
@@ -24,11 +26,24 @@
       var cnum_limited = [];
       var cname_limited = [];
     
-      var iter = 30;
+      var iter = 101;
       for(let i = 0; i < iter; i++){
-        cname_limited.push(cname[i]);
-        cnum_limited.push(cnum[i]);
+        if(cname[i][0] == 'C' && cname[i][1] == 'S'){
+            cname_limited.push(cname[i]);
+            cnum_limited.push(cnum[i]);
+        } 
       }
+
+      var econ_names = [];
+      var econ_num = [];
+
+      for(let i = 0; i < iter; i++){
+        if(cname[i][0] == 'E' && cname[i][1] == 'C'){
+            econ_names.push(cname[i]);
+            econ_num.push(cnum[i]);
+        } 
+      }
+
 
       var colors = [];
       for(let i = 0; i < iter; i++){
@@ -38,7 +53,6 @@
         if(i % 4 == 0){colors.push('#3c8dbc');}
         if(i % 5 == 0){colors.push('#d2d6df');}
       }
-      
 
       var chartData = {
                     labels: cname_limited,
@@ -50,9 +64,30 @@
                     ]
       }
 
+      var chartData2 = {
+                    labels: econ_names,
+                    datasets: [
+                      {
+                        data: econ_num,
+                        backgroundColor : colors,
+                      }
+                    ]
+      }
+
+    //   var chartData3 = {
+    //                 labels: ['h', 'k'],
+    //                 datasets: [
+    //                   {
+    //                     data: [1, 2, 3],
+    //                     backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+    //                   }
+    //                 ]
+    //   }
+
 
 
       var ctx = document.getElementById("myChart").getContext("2d");
+      var ctx2 = document.getElementById("myChart2").getContext("2d");
 
       var options = {
               tooltips: {
@@ -98,6 +133,34 @@
          }
 }
       });
+
+      var myChart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: chartData2,
+        options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }],
+          },
+          plugins: {
+          labels: {
+            render: () => {}
+          }
+        },
+        legend: {
+            display: false
+         }
+}
+      });
+
+    //   var myChart3 = new Chart(ctx3, {
+    //     type: 'pie',
+    //     data: chartData3,
+    //       options:options
+    //   });
 
 
 
