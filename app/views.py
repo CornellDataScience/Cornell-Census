@@ -9,10 +9,29 @@ reflect real-time changes to a database
 from flask import Flask, render_template, flash, request
 from app import forms, models, db, app
 import sqlite3
+import csv
+import json
 
 @app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
+
+@app.route('/courses', methods=['GET'])
+def courses():
+    path = 'app/data/cornellmedians.csv'
+    course_name = []
+    course_enrollment = []
+    course_median = []
+    with open(path) as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if (row[4] != 'No Data' and row[4] != '' and row[0] != '' and len(row[0]) < 9):
+                course_name.append(row[0])
+                course_enrollment.append(row[4])
+                course_median.append(row[2])
+
+    return render_template('course.html', names=json.dumps(course_name), enrollment=course_enrollment, median=course_median)
+
 
 @app.route('/graphs', methods=['GET', 'POST'])
 def graphs():
