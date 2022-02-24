@@ -18,7 +18,7 @@ def home():
 
 @app.route('/hello')
 def say_hello_world():
-    return {'result': "Hgjfrnjfnfrufhufhuuh"}
+    return {'result': "test test test this is from flask"}
 
 @app.route('/courses', methods=['GET'])
 def courses():
