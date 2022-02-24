@@ -16,6 +16,10 @@ import json
 def home():
     return render_template('index.html')
 
+@app.route('/hello')
+def say_hello_world():
+    return {'result': "Hgjfrnjfnfrufhufhuuh"}
+
 @app.route('/courses', methods=['GET'])
 def courses():
     path = 'app/data/cornellmedians.csv'
