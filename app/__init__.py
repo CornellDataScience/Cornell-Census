@@ -13,4 +13,4 @@ migrate = Migrate(app, db)
 ma = Marshmallow()
 cors = CORS()
 
-from app import views
+from app import routes
