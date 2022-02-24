@@ -10,25 +10,6 @@
   color: white;
 }
 
-.div1 {
-  padding-top: 90px;
-  position: relative;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.div2 {
-  padding-top: 70px;
-  position: relative;
-  text-align: center;
-}
-
-.div3 {
-  padding-top: 70px;
-  position: relative;
-  text-align: center;
-}
-
 #grad {
   background-image: linear-gradient(
     to bottom,
@@ -56,4 +37,18 @@ p {
   font-size: 15px;
   color: white;
   padding-bottom: 50px;
+}
+
+.row {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
