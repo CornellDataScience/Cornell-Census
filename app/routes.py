@@ -16,10 +16,9 @@ import json
 def home():
     return render_template('index.html')
 
-@app.route('/data', methods=['GET'])
-def data():
-    return render_template('data.html')
-
+@app.route('/hello')
+def say_hello_world():
+    return {'result': "test test test this is from flask"}
 
 @app.route('/courses', methods=['GET'])
 def courses():
