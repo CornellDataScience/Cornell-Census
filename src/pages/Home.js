@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 import '../static/styles/Home.css';
 import logo from '../static/img/census_logo.PNG';
-import Nvbar from '../components/Navbar.js';
+import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 
 
@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <div>
-      <Nvbar />
+      <Navbar />
       <div id="grad">
         <div className="div1">
             <div className="logo-div">

@@ -27,3 +27,12 @@
     box-sizing: border-box;
   }
   
+  .dept-title {
+    padding-left: 25px;
+    padding-top: 25px;
+    font-size: 70px;
+  }
+
+  .dtitle {
+    font-size: 60px;
+  }
