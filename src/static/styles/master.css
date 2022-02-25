@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Inter:wght@600&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap");
+
+.navbar-color {
+  background-color: black;
+  color: white;
+}
+
+.departmentPage {
+  font-family: "Inter", sans-serif;
+  font-style: "bold";
+}
+
+.grad {
+  font-family: "Gothic A1", sans-serif;
+}
+
+.ttext {
+  font-family: "Inter", sans-serif;
+  font-size: 70px;
+}
+
+.ttext2 {
+  font-family: "Inter", sans-serif;
+  font-size: 70px;
+  color: #bedcfa;
+}
+
+.navttext {
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+}
+
+.navttext2 {
+  font-family: "Inter", sans-serif;
+  color: #bedcfa;
+  font-size: 22px;
+}

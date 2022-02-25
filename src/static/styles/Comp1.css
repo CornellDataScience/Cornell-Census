@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  text-align: center;
+}
+
+.column {
+  flex: 50%;
+  text-align: center;
+}
+
+.card-t {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 2em;
+}
+
+.card-g {
+  margin-bottom: 20px;
+}
+
+.outline {
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom, #bedcfa, #98acf8);
+  margin: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap");
-
 .logo-div {
   display: inline-block;
   vertical-align: middle;
@@ -7,9 +5,10 @@
 
 .intro-text {
   display: inline-block;
-  width: 70%;
+  width: 600px;
   vertical-align: middle;
   color: white;
+  padding-left: 50px;
 }
 
 h1 {
@@ -21,27 +20,10 @@ h1 {
   position: relative;
   text-align: center;
   padding-bottom: 20px;
-  font-family: "Oxygen", sans-serif;
 }
 
-.div2 {
-  padding-top: 70px;
-  position: relative;
-  text-align: center;
-}
-
-.div3 {
-  padding-top: 70px;
-  position: relative;
-  text-align: center;
-}
-
-#grad {
-  background-image: linear-gradient(
-    to bottom,
-    rgb(255, 112, 112),
-    rgb(0, 0, 0)
-  );
+.grad {
+  background-image: linear-gradient(to bottom, #1976d2, #98acf8);
   min-width: 100%;
   min-height: 100vh;
 }
