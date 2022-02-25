@@ -1,6 +1,7 @@
 import BarChart from "./BarChart";
-//import LineChart from "./components/LineChart";
-//import PieChart from "./components/PieChart";
+import LineChart from "./LineChart";
+import PieChart from "./PieChart";
+import '../static/styles/main.css';
 //import { UserData } from "./Data";
 
 function Graph() {
@@ -25,8 +26,16 @@ function Graph() {
 
   return (
     <div className="graphPage">
-      <div style={{ width: 700 }}>
+      <div className="depChar">
+      <div className="barChar" style={{ width: 400 }}>
         <BarChart chartData={userData} />
+      </div>
+      <div className="pieChar" style={{ width: 300 }}>
+        <PieChart chartData={userData} />
+      </div>
+      <div className="lineChar" style={{ width: 400 }}>
+        <LineChart chartData={userData} />
+      </div>
       </div>
     </div>
   );
