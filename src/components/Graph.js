@@ -18,7 +18,7 @@ function Graph() {
           "#f3ba2f",
           "#2a71d0",
         ],
-        borderColor: "black",
+        borderColor: "white",
         borderWidth: 2,
       },
     ],
