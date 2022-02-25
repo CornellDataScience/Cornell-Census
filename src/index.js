@@ -6,14 +6,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 
 import Home from "./pages/Home";
+import Data from "./pages/Data";
 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-        </Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/data" element={<Data />}></Route>
       </Routes>
     </BrowserRouter>
   );

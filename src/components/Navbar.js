@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 
 const Nvbar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" sticky="top">
       <Container>
       <Navbar.Brand href="/">
         <img src={graphic1} width="30" height="30" className="d-inline-block" alt="logo"/>
@@ -13,13 +13,13 @@ const Nvbar = () => {
       </Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse id="justify-content-end">
-          <Nav className="auto-ml">
-            <Nav.Link href="#link">Home</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#link">Mission</Nav.Link>
-            <Nav.Link href="#link">Data</Nav.Link>
+          <Nav className="ms-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/">About</Nav.Link>
+            <Nav.Link href="/">Mission</Nav.Link>
+            <Nav.Link href="/data">Data</Nav.Link>
           </Nav>
-          
+
         </Navbar.Collapse>
       </Container>
     </Navbar>

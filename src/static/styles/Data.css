@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap");
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo-div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#grad {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 112, 112),
+    rgb(0, 0, 0)
+  );
+  min-width: 100%;
+  min-height: 100vh;
+}
