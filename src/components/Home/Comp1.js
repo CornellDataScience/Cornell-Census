@@ -12,8 +12,7 @@ const Comp1 = () => {
           <br></br>
           <h1>Classes</h1>
           <h3>Access course information from student distribution to median grades</h3>
-          
- 
+      
 
         </div>
         <div className="col">

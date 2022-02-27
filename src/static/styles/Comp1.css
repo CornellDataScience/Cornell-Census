@@ -21,8 +21,11 @@
 }
 
 .outline {
-  border-radius: 25px;
-  background-image: linear-gradient(to bottom, #bedcfa, #98acf8);
+  background-color: #a2d1ff;
   margin: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: white;
 }
