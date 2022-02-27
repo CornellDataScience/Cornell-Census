@@ -1,5 +1,5 @@
 import "../../static/styles/Comp2.css"
-import LineChart from "../Charts/LineChart.js"
+//import LineChart from "../Charts/LineChart.js"
 
 const data = {
   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -34,11 +34,11 @@ const op = {
 };
 
 const w = "30%";
-
+//<LineChart chartData={data} optionChoice={op} width={w}/>
 const Comp2 = () => {
   return (
     <div className="outline">
-      <LineChart chartData={data} optionChoice={op} width={w}/>
+      <h1>test</h1>
     </div>
   )
 }

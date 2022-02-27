@@ -1,5 +1,4 @@
 import BarChart from "./Charts/BarChart";
-import LineChart from "./Charts/LineChart";
 import PieChart from "./Charts/PieChart";
 import '../static/styles/main.css';
 //import { UserData } from "./Data";
@@ -32,9 +31,6 @@ function Graph() {
       </div>
       <div className="pieChar" style={{ width: 300 }}>
         <PieChart chartData={userData} />
-      </div>
-      <div className="lineChar" style={{ width: 400 }}>
-        <LineChart chartData={userData} />
       </div>
       </div>
     </div>
