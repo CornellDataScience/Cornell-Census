@@ -12,12 +12,13 @@ const Department = () => {
 
     return (
         <div className="departmentPage" style={{backgroundColor:"#311B92"}}>
+            <body style={{backgroundColor:"#311B92"}}>
             <Navbar />
             <div className="dept-title">
             <h1 className="dtitle">{department_name}</h1>
             <p>{department_desc}</p>
             </div>
-            <Graph />
+            </body>
         </div>
       )
     }

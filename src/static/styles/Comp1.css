@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Inter:wght@600&family=Open+Sans&display=swap");
+
 .row {
   display: flex;
   text-align: center;
@@ -11,21 +13,61 @@
 .card-t {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin: 10px;
-  width: 12rem;
-  height: 12rem;
+  width: 11rem;
+  height: 11rem;
   border-radius: 2em;
 }
 
 .card-g {
   margin-bottom: 20px;
+  border-radius: 45px;
 }
 
 .outline {
   background-color: #a2d1ff;
   margin: 5%;
+  border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
   color: white;
 }
+
+.col {
+  text-align: center;
+}
+
+.inBox {
+  margin-top: 10px;
+  font-size: 80px;
+  text-align: center;
+  vertical-align:center;
+}
+
+.grade {
+  margin-top: 10px;
+  font-size: 80px;
+  color: green;
+}
+
+.gradeB {
+  margin-top: 10px;
+  font-size: 80px;
+  color: red;
+}
+
+.medianText {
+  font-family: "Inter", sans-serif;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.bodyText {
+  width: 90%;
+  color: black;
+  font-size: 24px;
+  margin-left: 40px;
+}
+
+
