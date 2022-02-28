@@ -3,14 +3,21 @@ import "../../static/styles/Comp3.css"
 const Comp3 = () => {
   return (
     <div className="outline">
-      <br></br>
-      <div className="leftText">
-      <strong><p style={{fontSize: "50px", paddingLeft: "15px"}}>Discover Cornell.</p></strong>
+      <div className="review1">
+        <strong><p className="prof">James Belk</p></strong>
+        <p className="reviewText">Mr. Belk is one of the best professors that I have ever had. He had a complex understanding of the content and ensured that every student excelled in his class.</p>
+        <h2 className="author">-Anonymous</h2>
       </div>
-      <div className="rightText">
-      <p style={{fontSize: "50px"}}>Browse Data</p>
+      <div className="review2">
+      <strong><p className="prof">Thomas Conelly</p></strong>
+        <p className="reviewText">Mr. Belk is one of the best professors that I have ever had. He had a complex understanding of the content and ensured that every student excelled in his class.</p>
+        <h2 className="author">-Anonymous</h2>
       </div>
-      <br></br>
+      <div className="review3">
+      <strong><p className="prof">David Gries</p></strong>
+        <p className="reviewText">Mr. Belk is one of the best professors that I have ever had. He had a complex understanding of the content and ensured that every student excelled in his class.</p>
+        <h2 className="author">-Anonymous</h2>
+      </div>
     </div>
   )
 }
