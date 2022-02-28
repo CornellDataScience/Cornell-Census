@@ -4,6 +4,7 @@ import '../static/styles/Home.css';
 import '../static/styles/master.css';
 import Navbar from '../components/Navbar';
 import Graph from '../components/Graph';
+import Donut from '../components/Charts/Donut';
 
 const Department = () => {
     const department_name = "Computer Science";
@@ -17,6 +18,7 @@ const Department = () => {
             <div className="dept-title">
             <h1 className="dtitle">{department_name}</h1>
             <p>{department_desc}</p>
+            <Donut />
             </div>
             </body>
         </div>
