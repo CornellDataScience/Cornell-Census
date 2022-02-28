@@ -1,5 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Inter:wght@600&family=Open+Sans&display=swap");
+
 .outline {
   background-color: #bedcfa;
   margin: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Inter", sans-serif;
+}
+
+.leftText {
+  display: inline-block;
+  padding-right: 190px;
+  margin-left: 10px;
+  vertical-align: center;
+  padding-bottom: 10px;
+}
+
+.rightText {
+  display: inline-block;
+  background-color: #1976D2;
+  border-radius: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: white;
+  float: right;
+  margin-right: 10px;
+  
 }

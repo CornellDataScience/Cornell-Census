@@ -41,6 +41,8 @@ function Home() {
         <Comp1 />
         <Comp2 />
         <Comp3 />
+
+        <h1>test</h1>
       </div>
     </div>
   );
