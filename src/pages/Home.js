@@ -1,6 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 import '../static/styles/Home.css';
 import '../static/styles/master.css';
+import '../static/styles/Comp1.css';
 import logo from '../static/img/census_logo_new.png';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
@@ -34,7 +35,7 @@ function Home() {
                   <h1 className="ttext">Census</h1>
                 </div>
                 <br></br>
-                <p>Information all available in one place and open to the public. Transparency in the community at Cornell. </p>
+                <p className="bodyTextA">Information all available in one place and open to the public. Transparency in the community at Cornell. </p>
             </div>
         </div>
         <Comp1 />

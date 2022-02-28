@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Inter:wght@600&family=Open+Sans&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+ 
 .row {
   display: flex;
   text-align: center;
@@ -46,13 +47,13 @@ h3 {
 }
 
 .grade {
-  margin-top: 10px;
+  margin-top: 0px;
   font-size: 80px;
   color: green;
 }
 
 .gradeB {
-  margin-top: 10px;
+  margin-top: 0px;
   font-size: 80px;
   color: red;
 }
@@ -61,13 +62,32 @@ h3 {
   font-family: "Inter", sans-serif;
   margin-top: 120px;
   text-align: center;
+  font-size: 45px;
 }
 
 .bodyText {
   width: 90%;
   color: black;
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: "Semi-Bold";
+  font-weight: lighter;
+}
+
+.bodyTextA {
+  color: white;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: "Semi-Bold";
+  font-weight: lighter;
+}
+
+.courseTitle{
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0px;
+  font-weight: "Semi-Bold";
 }
 
 

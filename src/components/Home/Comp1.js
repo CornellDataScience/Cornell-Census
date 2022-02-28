@@ -11,7 +11,7 @@ const Comp1 = () => {
         <div className="col">
           <div style={{}}>
           <br></br>
-          <h1 className="medianText">Course Medians</h1>
+          <strong><p className="medianText">Course Medians</p></strong>
           <h3 className="bodyText">Access course information from over 700 courses offered at Cornell University. Browse data from historical course median to student enrollment.</h3>
           </div>
           
@@ -26,7 +26,7 @@ const Comp1 = () => {
               <Col>
                 <Card className="card-t" style={{ borderRadius: 25 }}>
                   <Card.Body>
-                    <Card.Title>CS 1110</Card.Title>
+                    <Card.Title><strong><p className="courseTitle">CS 1110</p></strong></Card.Title>
                     <Card.Text>
                       <div className="inBox">
                         <h1 className="gradeB">B+</h1>
@@ -44,7 +44,7 @@ const Comp1 = () => {
               <Col>
                 <Card className="card-t" style={{ borderRadius: 25 }}>
                   <Card.Body>
-                    <Card.Title>CS 2110</Card.Title>
+                    <Card.Title><strong><p className="courseTitle">CS 2110</p></strong></Card.Title>
                     <Card.Text>
                       <div className="inBox">
                         <h1 className="grade">A-</h1>
