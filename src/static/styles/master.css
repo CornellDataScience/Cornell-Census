@@ -37,3 +37,10 @@
   color: #bedcfa;
   font-size: 22px;
 }
+
+.foot {
+  background-color: transparent;
+  color: black;
+  font-family: "Inter", sans-serif;
+  margin-bottom: -20px;
+}

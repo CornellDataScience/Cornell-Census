@@ -43,7 +43,8 @@ function Home() {
         <Comp2 />
         <Comp3 />
 
-        <h1>test</h1>
+        <Footer/>
+        <br></br>
       </div>
     </div>
   );
