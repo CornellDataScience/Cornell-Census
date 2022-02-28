@@ -36,6 +36,7 @@ function Home() {
                 </div>
                 <br></br>
                 <p className="bodyTextA">Information all available in one place and open to the public. Transparency in the community at Cornell. </p>
+                <strong><p className="discover">Discover Cornell</p></strong>
             </div>
         </div>
         <Comp1 />

@@ -1,6 +1,6 @@
 .logo-div {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: center;
 }
 
 .intro-text {
@@ -46,4 +46,19 @@ p {
   color: white;
   padding-bottom: 50px;
   background-color: black;
+}
+
+.discover {
+  color: #1976d2;
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.bodyTextA {
+  vertical-align: center;
 }

@@ -28,6 +28,7 @@ const Nvbar = () => {
             <Nav.Link style={{color:"white"}} href="/">About</Nav.Link>
             <Nav.Link style={{color:"white"}} href="/">Mission</Nav.Link>
             <Nav.Link style={{color:"white"}} href="/data">Data</Nav.Link>
+            <Nav.Link style={{color:"#1976D2", backgroundColor:"white", borderRadius:"15px", paddingTop:"-15px", marginLeft:"5px"}} href="/data"><strong>Explore</strong></Nav.Link>
           </Nav>
 
         </Navbar.Collapse>
