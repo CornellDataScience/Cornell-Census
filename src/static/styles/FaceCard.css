@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Inter:wght@600&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.card-to {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 50px;
+  background-color: #a2d1ff;
+  border-radius: 20px;
+}
+
+.img-ft {
+  width: 250px;
+  height: 250px;
+}
+
+h3 {
+  color: white;
+}
+
+.col {
+  text-align: center;
+}
+
+.inBox {
+  margin-top: 10px;
+  font-size: 80px;
+  text-align: center;
+  vertical-align: center;
+}

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Home from "./pages/Home";
 import Data from "./pages/Data";
+import Team from "./pages/Team";
 import Department from "./pages/Department";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/data" element={<Data />}></Route>
+        <Route path="/team" element={<Team />}></Route>
         <Route path="/department" element={<Department />}></Route>
       </Routes>
     </BrowserRouter>

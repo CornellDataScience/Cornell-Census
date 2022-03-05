@@ -24,8 +24,18 @@ function Home() {
       <Navbar />
       <div className="grad">
         <div className="div1">
+            <div className="linecolors">
+              <div className="orange">
+              </div>
+              <div className="blue">
+              </div>
+              <div className="red">
+              </div>
+              <div className="green">
+              </div>
+            </div>
             <div className="logo-div">
-                <img src={logo} width="400px" height="400px" alt="img0"/>
+                <img src={logo} width="400px" height="400px" alt="img0" style={{zIndex: "9"}}/>
             </div>
             <div className="intro-text">
                 <div style={{display: "inline-block"}}>
@@ -38,6 +48,7 @@ function Home() {
                 <p className="bodyTextA">Information all available in one place and open to the public. Transparency in the community at Cornell. </p>
                 <strong><p className="discover">Discover Cornell</p></strong>
             </div>
+            
         </div>
         <Comp1 />
         <Comp2 />

@@ -25,7 +25,7 @@ const Nvbar = () => {
         <Navbar.Collapse id="justify-content-end">
           <Nav className="ms-auto">
             <Nav.Link style={{color:"white"}} href="/">Home</Nav.Link>
-            <Nav.Link style={{color:"white"}} href="/">Team</Nav.Link>
+            <Nav.Link style={{color:"white"}} href="/Team">Team</Nav.Link>
             <Nav.Link style={{color:"white"}} href="/">Mission</Nav.Link>
             <Nav.Link style={{color:"white"}} href="/data">Data</Nav.Link>
             <Nav.Link style={{color:"#1976D2", backgroundColor:"white", borderRadius:"15px", paddingTop:"-15px", marginLeft:"5px"}} href="/data"><strong>Explore</strong></Nav.Link>
