@@ -5,6 +5,8 @@ import Footer from '../components/Footer.js';
 import CardGroup from 'react-bootstrap/CardGroup';
 import FaceCard from '../components/Team/FaceCard';
 import arjun from '../static/img/ArjunShah.jpeg';
+import elliot from '../static/img/ElliotvanHuijgevoort.jpeg';
+
 
 function Team() {
 
@@ -15,11 +17,10 @@ function Team() {
         <strong><p className="teamP">Team</p></strong>
       
       <CardGroup style={{justifyContent: "center"}}>
-        <FaceCard name={"David"} image={arjun}>
-            </FaceCard> 
-        <FaceCard name={"David"}></FaceCard>  
-        <FaceCard name={"David"}></FaceCard>     
-        <FaceCard name={"David"}></FaceCard>    
+        <FaceCard name={"David Han"} image={arjun} text={"davidhm"}></FaceCard> 
+        <FaceCard name={"David Han"} image={arjun}></FaceCard>  
+        <FaceCard name={"Elliot van Huijgevoort"} image={elliot}></FaceCard>     
+        <FaceCard name={"Arjun Shah"} image={arjun}></FaceCard>    
       </CardGroup>
 
       <div className="cds">

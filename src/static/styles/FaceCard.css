@@ -3,14 +3,17 @@
 
 .card-to {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  margin: 50px;
+  margin: 60px;
   background-color: #a2d1ff;
   border-radius: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .img-ft {
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
+  border-radius: 205px;
 }
 
 h3 {
@@ -26,4 +29,47 @@ h3 {
   font-size: 80px;
   text-align: center;
   vertical-align: center;
+}
+
+.myname {
+  text-align: center;
+}
+
+.major-text {
+  font-size: 15px;
+}
+
+.major {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.aboutme {
+  text-align: center;
+  padding-top: 25px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.linkedin {
+  display: inline-block;
+}
+
+.github {
+  display: inline-block;
+  padding-right:20px;
+  padding-left:20px;
+}
+
+.website {
+  display: inline-block;
+}
+
+.socials {
+  padding-top:10px;
+  padding-bottom:10px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
 }
