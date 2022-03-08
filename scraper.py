@@ -6,32 +6,37 @@ import html
 import csv
 
 class RateMyProfScraper:
-        def __init__(self,schoolid):
-            self.UniversityId = schoolid
-            self.professorlist = self.createprofessorlist()
-            self.indexnumber = False
+        def __init__(self,schoolid, made):
+            if(made):
+                self.UniversityId = schoolid
+                self.professorlist = self.readproffromCSV()
+                self.indexnumber = False
+            else:
+                self.UniversityId = schoolid
+                self.professorlist = self.createprofessorlist()
+                self.indexnumber = False
 
         # can you filter on course subject, or around courses?, around difficulty rating, etc?
-        # Filters seem like a more front-end deal, could just make the helper functions in this class though. \
 
-# THINGS TO DO: save data to txt file so it doesn't take 20 goddamn minutes to run. fix sort function, test filter function. Get data from excel sheet.
+# THINGS TO DO: save data to csv file so it doesn't take 20 goddamn minutes to run. fix sort function, test filter function. Get data from excel sheet.
 # Get rating of the chosen review, get course that review references to. 
 # Time graph for cornell althetics gym.
     #Heroku to be live
 
+        # reads from csv, returns list of dictionaries representing the tilst of professors.
         def readproffromCSV(self):
             csv_file = "professor_list.csv"
             try:
-                with open(csv_file, 'w') as f:
+                with open(csv_file) as f:
                     lst = []
                     csv_reader = csv.DictReader(f)
                     for prof in csv_reader:
-                        lst.append(prof)
-                    self.professorlist = lst
+                        lst.append(dict(prof))
                     return lst
             except IOError:
                 print("I/O error")
 
+        # adds list of professors to csv file.
         def addproftoCSV(self, proflist):
             csv_file = "professor_list.csv"
             try:
@@ -63,6 +68,17 @@ class RateMyProfScraper:
                     "https://www.ratemyprofessors.com/ShowRatings.jsp?tid=" + str(
                         tSid))
                 s = str(page.content)
+                rating_key = "CardNumRating__CardNumRatingNumber-sc-17t4b9u-2 kMhQxZ"
+                quality_rating_idx = s.find(rating_key)
+                end_idx = s.find('</div>', quality_rating_idx, len(page.content)-1)
+                teacher['review_quality_rating'] = html.unescape(s[quality_rating_idx+len(rating_key)+2:end_idx])
+                difficulty_rating_idx = s.find(rating_key, quality_rating_idx, len(page.content)-1)
+                end_idx = s.find('</div>', difficulty_rating_idx, len(page.content)-1)
+                teacher['review_difficulty_rating'] = html.unescape(s[difficulty_rating_idx+len(rating_key)+2:end_idx])
+                class_key = "<RatingHeader__StyledClass-sc-1dlkqw1-2 gxDIt"
+                class_idx = s.find(class_key)
+                end_idx = s.find('</div>', class_idx, len(page.content)-1)
+                teacher['review_class'] = html.unescape(s[class_idx+len(class_key)+2:end_idx])
                 key = 'Comments__StyledComments-dzzyvm-0 gRjWel'
                 idx = s.find(key)
                 if(idx != -1):
@@ -76,7 +92,14 @@ class RateMyProfScraper:
 
         def SortByRating(self, isDec):
             if(isDec):
-                return sorted(self.professorlist, key = lambda i: i['overall_rating'],reverse=True)
+                lst =  sorted(self.professorlist, key = lambda i: i['overall_rating'],reverse=True)
+                for i in range(len(lst)):
+                    prof = lst[i]
+                    if(prof['overall_rating'] == 'N/A'):
+                        lst.append(prof)
+                        del lst[i]
+                return lst
+                        
             else:
                 return sorted(self.professorlist, key = lambda i: i['overall_rating'])
 
@@ -87,10 +110,10 @@ class RateMyProfScraper:
                     tempList.append(teacher)
             return tempList
 
-        def GetAllSubject(self):
+        def GetAllSubjects(self):
             subjectList = []
             for teacher in self.professorlist:
-                if teacher['tDept'] in subjectList:
+                if teacher['tDept'] not in subjectList:
                     subjectList.append(teacher['tDept'])
             return subjectList
 
@@ -130,5 +153,7 @@ class RateMyProfScraper:
                 return self.professorlist[self.indexnumber][key]
 
 # Once a database is created, we can load the info into a database and read from there, so that it doesn't take 20 minutes to run.
-Cornell = RateMyProfScraper(298)
+Cornell = RateMyProfScraper(298, True)
+print(Cornell.GetAllSubjects())
+# print(RateMyProfScraper.readproffromCSV())
 
