@@ -1,9 +1,13 @@
 // import React, { useState, useEffect } from 'react';
 import '../static/styles/Home.css';
-import logo from '../static/img/census_logo.PNG';
-import Nvbar from '../components/Navbar.js';
+import '../static/styles/master.css';
+import '../static/styles/Comp1.css';
+import logo from '../static/img/census_logo_new.png';
+import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
-
+import Comp1 from '../components/Home/Comp1.js';
+import Comp2 from '../components/Home/Comp2.js';
+import Comp3 from '../components/Home/Comp3.js';
 
 
 function Home() {
@@ -17,20 +21,42 @@ function Home() {
 
   return (
     <div>
-      <Nvbar />
-      <div id="grad">
+      <Navbar />
+      <div className="grad">
         <div className="div1">
+            <div className="linecolors">
+              <div className="orange">
+              </div>
+              <div className="blue">
+              </div>
+              <div className="red">
+              </div>
+              <div className="green">
+              </div>
+            </div>
             <div className="logo-div">
-                <img src={logo} width="200px" height="200px" alt="img0"/>
+                <img src={logo} width="400px" height="400px" alt="img0" style={{zIndex: "9"}}/>
             </div>
             <div className="intro-text">
-                <h1>CornellCensus</h1>
+                <div style={{display: "inline-block"}}>
+                  <h1 className="ttext2">Cornell</h1>
+                </div>
+                <div style={{display: "inline-block"}}>
+                  <h1 className="ttext">Census</h1>
+                </div>
                 <br></br>
-                <p>Information all available in one place and open to the public. Transparency in the community at Cornell. </p>
+                <p className="bodyTextA">Information all available in one place and open to the public. Transparency in the community at Cornell. </p>
+                <strong><p className="discover">Discover Cornell</p></strong>
             </div>
+            
         </div>
+        <Comp1 />
+        <Comp2 />
+        <Comp3 />
+
+        <Footer/>
+        <br></br>
       </div>
-      <Footer />
     </div>
   );
 }

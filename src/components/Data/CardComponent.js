@@ -2,7 +2,8 @@ import Card from 'react-bootstrap/Card';
 
 const CardComponent = (props) => {
   return (
-    <Card>
+    <div>
+      <Card>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text>
@@ -11,6 +12,7 @@ const CardComponent = (props) => {
         <a href={props.link} class="stretched-link"></a>
       </Card.Body>
     </Card>
+    </div>
   )
 }
 

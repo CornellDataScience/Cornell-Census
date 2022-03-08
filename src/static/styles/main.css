@@ -27,3 +27,36 @@
     box-sizing: border-box;
   }
   
+  .dept-title {
+    padding-left: 25px;
+    padding-top: 25px;
+    font-size: 70px;
+    color: white;
+  }
+
+  .dtitle {
+    font-size: 60px;
+  }
+
+  .barChar {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pieChar {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .lineChar {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .depChar {
+    padding-top: 70px;
+    position: relative;
+    text-align: center;
+  }
