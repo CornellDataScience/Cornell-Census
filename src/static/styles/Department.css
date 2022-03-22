@@ -1,0 +1,36 @@
+.logo-div {
+  display: inline-block;
+  vertical-align: center;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.grad {
+  background-image: linear-gradient(to bottom, #1976d2, #98acf8);
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.title-text {
+  text-align: center;
+  padding-top: 50px;
+  font-weight: lighter;
+  font-size: 72px;
+  color: white;
+  overflow: visible;
+  z-index: 1000;
+}
+
+p {
+  font-size: 25px;
+}
+
+.foot {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding-bottom: 50px;
+  background-color: black;
+}

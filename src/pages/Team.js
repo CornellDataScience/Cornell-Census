@@ -17,7 +17,6 @@ function Team() {
         <strong><p className="teamP">Team</p></strong>
       
       <CardGroup style={{justifyContent: "center"}}>
-        <FaceCard name={"David Han"} image={arjun} text={"davidhm"}></FaceCard> 
         <FaceCard name={"David Han"} image={arjun}></FaceCard>  
         <FaceCard name={"Elliot van Huijgevoort"} image={elliot}></FaceCard>     
         <FaceCard name={"Arjun Shah"} image={arjun}></FaceCard>    
