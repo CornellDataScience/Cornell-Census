@@ -7,7 +7,6 @@ import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
 
 const Department = () => {
 
@@ -31,7 +30,11 @@ const Department = () => {
           const params2 = {cA:data.abb}
           fetch(`/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
             const med_info = data.allInfo;
-            setCardItems(med_info.map((info) => <Card className="card-z">{info[0]}</Card>));
+            setCardItems(med_info.map((info) => 
+              <Card className="card-z">{info[0]}
+              
+              </Card>
+            ));
         })
       })
     }
