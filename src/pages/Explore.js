@@ -19,7 +19,7 @@ function Explore() {
                 <p>CS 2112</p>
             </div>
             <div className="contents-right">
-            <strong><p>See All Courses</p></strong>
+            <a href="/department"><strong><p>See All Courses</p></strong></a>
             </div>
         </div>
         <br></br>
@@ -32,7 +32,7 @@ function Explore() {
                 <p>David Han</p>
             </div>
             <div className="contents-right">
-            <strong><p>See All Professors</p></strong>
+            <a href="/professors"><strong><p>See All Professors</p></strong></a>
             </div>
         </div>
       

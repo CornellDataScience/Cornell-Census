@@ -6,12 +6,15 @@ information to html file to visualize user-submitted data. Graphs are dynamic an
 reflect real-time changes to a database
 """
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import csv, json
 
 app = Flask(__name__)
 
 prof_file = "./data/professor_list.csv"
+course_abbrev = "./data/courses.csv"
+course_medians = "./data/coursemedians.csv"
+
 def readproffromCSV(csv_file):
     try:
         with open(csv_file) as f:
@@ -24,6 +27,50 @@ def readproffromCSV(csv_file):
         print("I/O error")
 
 prof_list = readproffromCSV(prof_file)['professor_list']
+
+def readcoursefromCSV(csv_file):
+    try: 
+        with open(csv_file, mode='r', encoding='utf-8-sig') as f:
+            lst = []
+            csv_reader = csv.DictReader(f)
+            for course in csv_reader:
+                lst.append(dict(course))
+            return {'course_list' : lst}
+    except IOError:
+        print("I/O error")
+
+course_list = readcoursefromCSV(course_abbrev)['course_list']
+
+def readmediansfromCSV(csv_file):
+    try: 
+        with open(csv_file, mode='r', encoding='utf-8-sig') as f:
+            lst = []
+            csv_reader = csv.DictReader(f)
+            for course in csv_reader:
+                lst.append(dict(course))
+            return {'medians_list' : lst}
+    except IOError:
+        print("I/O error")
+
+medians_list = readmediansfromCSV(course_medians)['medians_list']
+
+@app.route('/get_median_info', methods=['GET'])
+def medianInfo():
+    courseAbbrev = request.args.get('cA')
+    allInfo = []
+    for mI in medians_list:
+        if courseAbbrev in mI['Dept']:
+            allInfo.append([mI['Dept'], mI['Professor'], mI['Median Grade'], mI['Semester'], mI['# of Students']])
+    return {'allInfo' : allInfo}
+
+
+@app.route('/get_abbrev', methods=['GET'])
+def abbrev():
+    course = request.args.get('c')
+    for dC in course_list:
+        if dC['Course'] == course:
+            return {'abb' : dC['Abbrev']}
+
 
 @app.route('/sorted_prof', methods=['GET'])
 def SortByRating():
@@ -46,9 +93,26 @@ def SortByRating():
 @app.route('/all_subjects', methods=['GET'])
 def GetAllSubjects():
     subjectList = []
-    for teacher in prof_list:
-        if teacher['tDept'] not in subjectList:
-            subjectList.append(teacher['tDept'])
+    for course in course_list:
+        if course['Course'] not in subjectList:
+            subjectList.append(course['Course'])
     return {'all_subjects' : subjectList}
+
+@app.route('/all_professors', methods=['GET'])
+def GetAllProfessors():
+    profList = []
+    for prof in prof_list:
+        n = prof['tFname'] + ' ' + prof['tLname']
+        if n not in profList:
+            profList.append([n, prof['overall_rating']])
+    return {'all_professors' : profList}
+
+@app.route('/pull_rating', methods=['GET'])
+def pullRating():
+    prof = request.args.get('c')
+    for p in prof_list:
+        n = p['tFname'] + ' ' + p['tLname']
+        if n == prof:
+            return {'rating' : p['overall_rating']}
 
 
