@@ -36,7 +36,7 @@ function Explore() {
             </div>
         </div>
       
-
+      <br></br>
       <div className="cds">
           In collaboration with Cornell Data Science.
           <Footer />

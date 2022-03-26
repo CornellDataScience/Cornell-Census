@@ -35,9 +35,10 @@ function Mission() {
                 </div>
               
            
-          
-         
+            
             </div>
+            <br></br>
+            <Footer/>
         </div>
         
 
