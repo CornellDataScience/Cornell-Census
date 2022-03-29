@@ -31,7 +31,7 @@ const Department = () => {
           fetch(`/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
             const med_info = data.allInfo;
             setCardItems(med_info.map((info) => 
-              <Card className="card-z">{info[0]}
+              <Card className="card-z">{info[0]}{info[1]}{info[2]}{info[3]}
               
               </Card>
             ));
