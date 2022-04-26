@@ -58,8 +58,7 @@ h3 {
 
 .github {
   display: inline-block;
-  padding-right:20px;
-  padding-left:20px;
+  padding-left: 20px;
 }
 
 .website {
@@ -67,8 +66,8 @@ h3 {
 }
 
 .socials {
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   justify-content: center;
   margin: 0 auto;
   text-align: center;

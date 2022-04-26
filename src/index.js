@@ -11,6 +11,7 @@ import Team from "./pages/Team";
 import Explore from "./pages/Explore";
 import Mission from "./pages/Mission";
 import Department from "./pages/Department";
+import Professors from "./pages/Professors";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/explore" element={<Explore />}></Route>
         <Route path="/mission" element={<Mission />}></Route>
         <Route path="/department" element={<Department />}></Route>
+        <Route path="/professors" element={<Professors />}></Route>
       </Routes>
     </BrowserRouter>
   );
