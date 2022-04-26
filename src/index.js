@@ -10,6 +10,7 @@ import Data from "./pages/Data";
 import Team from "./pages/Team";
 import Explore from "./pages/Explore";
 import Mission from "./pages/Mission";
+import Gym from "./pages/Gym";
 import Department from "./pages/Department";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/team" element={<Team />}></Route>
         <Route path="/explore" element={<Explore />}></Route>
         <Route path="/mission" element={<Mission />}></Route>
+        <Route path="/gym" element={<Gym />}></Route>
         <Route path="/department" element={<Department />}></Route>
       </Routes>
     </BrowserRouter>
