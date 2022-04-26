@@ -48,7 +48,7 @@ const Professors = () => {
            <h1>{defRating}</h1>
             </div>
             <div className="reviews">
-              <h1>Reviews</h1>
+              <h1 className="review-title">Reviews</h1>
               <p>{defReview}</p>
             </div>
            

@@ -32,6 +32,7 @@ function Explore() {
                 <p>David Han</p>
             </div>
             <div className="contents-right">
+            <a href="/professors"><strong><p>Sort By Rating</p></strong></a> 
             <a href="/professors"><strong><p>See All Professors</p></strong></a>
             </div>
         </div>
