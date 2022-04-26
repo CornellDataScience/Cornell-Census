@@ -67,3 +67,16 @@ p {
   border-radius: 25px;
   text-align: center;
 }
+
+.reviews {
+  margin-top: 75px;
+  margin-right: 10%;
+  vertical-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: -5px;
+  border-radius: 25px;
+  text-align: center;
+}

@@ -13,6 +13,7 @@ const Professors = () => {
     const [professorName="Select A Professor", setInfo] = useState();
 
     const [defRating="5.0", setRating] = useState();
+    const [defReview="They are okay.", setReview] = useState();
     
 
     useEffect(() => {
@@ -27,7 +28,7 @@ const Professors = () => {
       setInfo(e.target.value)
       const params = {c:e.target.value}
       fetch(`/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
-          setRating(data.rating);
+          setRating(data.rating); setReview(data.review);
       })
     }
 
@@ -44,6 +45,10 @@ const Professors = () => {
           </div>
            <div className="right-upper">
            <h1>{defRating}</h1>
+            </div>
+            <div className="reviews">
+              <h1>Reviews</h1>
+              <p>{defReview}</p>
             </div>
            
             </div>

@@ -103,8 +103,9 @@ def GetAllProfessors():
     profList = []
     for prof in prof_list:
         n = prof['tFname'] + ' ' + prof['tLname']
-        if n not in profList:
-            profList.append([n, prof['overall_rating']])
+        rev = prof['review']
+        if n not in profList and rev != "":
+            profList.append([n, prof['overall_rating'], prof['review']])
     return {'all_professors' : profList}
 
 @app.route('/pull_rating', methods=['GET'])
@@ -112,7 +113,9 @@ def pullRating():
     prof = request.args.get('c')
     for p in prof_list:
         n = p['tFname'] + ' ' + p['tLname']
-        if n == prof:
-            return {'rating' : p['overall_rating']}
+        rev = p['review']
+        rat = p['overall_rating']
+        if n == prof and rev != "" and rat != "" and rat != "N/A":
+            return {'rating' : p['overall_rating'], 'review': p['review']}
 
 
