@@ -104,7 +104,8 @@ def GetAllProfessors():
     for prof in prof_list:
         n = prof['tFname'] + ' ' + prof['tLname']
         rev = prof['review']
-        if n not in profList and rev != "":
+        rat = prof['overall_rating']
+        if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
             profList.append([n, prof['overall_rating'], prof['review']])
     return {'all_professors' : profList}
 
@@ -115,7 +116,7 @@ def pullRating():
         n = p['tFname'] + ' ' + p['tLname']
         rev = p['review']
         rat = p['overall_rating']
-        if n == prof and rev != "" and rat != "" and rat != "N/A":
+        if n == prof and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
             return {'rating' : p['overall_rating'], 'review': p['review']}
 
 
