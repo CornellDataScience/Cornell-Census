@@ -98,6 +98,17 @@ def GetAllSubjects():
             subjectList.append(course['Course'])
     return {'all_subjects' : subjectList}
 
+@app.route('/all_professors2', methods=['GET'])
+def GetAllProfessors2():
+    profList = []
+    for prof in prof_list:
+        n = prof['tFname'] + ' ' + prof['tLname']
+        rev = prof['review']
+        rat = prof['overall_rating']
+        if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
+            profList.append([prof['overall_rating'],n, prof['review']])
+    return {'all_professors2' : profList}
+
 @app.route('/all_professors', methods=['GET'])
 def GetAllProfessors():
     profList = []
@@ -108,6 +119,7 @@ def GetAllProfessors():
         if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
             profList.append([n, prof['overall_rating'], prof['review']])
     return {'all_professors' : profList}
+
 
 @app.route('/pull_rating', methods=['GET'])
 def pullRating():
