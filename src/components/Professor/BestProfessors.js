@@ -48,10 +48,6 @@ const BestProfessors = () => {
                 <p>{optionItems}</p>
         	</div>
              
-        
-           
-            
-           
             </div>
         </div>
       )
