@@ -27,11 +27,12 @@ function Explore() {
         <div className="cont1">
             <div className="contents-left">
                 <strong><p className="div-title">Professors</p></strong>
-                <p>Jim Belk</p>
-                <p>David Gries</p>
+                <a href="/50best"><p>View 50 Highest Rated Cornell Professors</p></a>
+                <a href="/50best"><p>View 50 Worst Rated Cornell Professors</p></a>
                 <p>David Han</p>
             </div>
             <div className="contents-right">
+            <a href="/professorranking"><strong><p>Sort By Rating</p></strong></a> 
             <a href="/professors"><strong><p>See All Professors</p></strong></a>
             </div>
         </div>

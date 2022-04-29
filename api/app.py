@@ -98,21 +98,52 @@ def GetAllSubjects():
             subjectList.append(course['Course'])
     return {'all_subjects' : subjectList}
 
+@app.route('/all_professors2', methods=['GET'])
+def GetAllProfessors2():
+    profList = []
+    for prof in prof_list:
+        n = prof['tFname'] + ' ' + prof['tLname']
+        rev = prof['review']
+        rat = prof['overall_rating']
+        if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
+            profList.append([prof['overall_rating'],n, prof['review']])
+    return {'all_professors2' : profList}
+
+@app.route('/get50best', methods=['GET'])
+def get50best():
+    profList = []
+    for prof in prof_list:
+        n = prof['tFname'] + ' ' + prof['tLname']
+        rev = prof['review']
+        rat = prof['overall_rating']
+        if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != "." and float(rat) >= 4.5:
+            profList.append([prof['overall_rating'],n, prof['review']])
+    if len(profList) >= 51:
+        profList2 = profList[0:50]
+    else:
+        profList2 = profList
+    return {'get50best' : profList2}
+
 @app.route('/all_professors', methods=['GET'])
 def GetAllProfessors():
     profList = []
     for prof in prof_list:
         n = prof['tFname'] + ' ' + prof['tLname']
-        if n not in profList:
-            profList.append([n, prof['overall_rating']])
+        rev = prof['review']
+        rat = prof['overall_rating']
+        if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
+            profList.append([n, prof['overall_rating'], prof['review']])
     return {'all_professors' : profList}
+
 
 @app.route('/pull_rating', methods=['GET'])
 def pullRating():
     prof = request.args.get('c')
     for p in prof_list:
         n = p['tFname'] + ' ' + p['tLname']
-        if n == prof:
-            return {'rating' : p['overall_rating']}
+        rev = p['review']
+        rat = p['overall_rating']
+        if n == prof and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
+            return {'rating' : p['overall_rating'], 'review': p['review']}
 
 
