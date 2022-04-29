@@ -18,9 +18,9 @@ const BestProfessors = () => {
     
 
     useEffect(() => {
-      fetch('/get50best').then(res => res.json()).then(data => {
+      fetch('https://census-backend.herokuapp.com/get50best').then(res => res.json()).then(data => { //style={ count === 1 || count === 2 || count === 0 ? { fontSize : "60px" } : null}
         const AS=data.get50best
-        setOptionItems(AS.sort().reverse().map((professor, count) => <option key={professor}>{count+1}. {professor[1]} ({professor[0]})</option>));
+        setOptionItems(AS.sort().reverse().map((professor, count) => <option style={ count === 1 || count === 2 || count === 0 ? { fontSize : "50px", paddingBottom : "10px" } : {fontSize : "30px", paddingBottom : "5px"}} key={professor}>{count+1}. {professor[1]} ({professor[0]})</option>));
       });
 
     }, []);
