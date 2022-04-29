@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../static/styles/Department.css';
-import '../static/styles/master.css';
-import Navbar from '../components/Navbar';
+import '../../static/styles/Department.css';
+import '../../static/styles/master.css';
+import Navbar from '../../components/Navbar';
 import SelectSearch from 'react-select-search';
-import Donut from '../components/Charts/Donut';
+import Donut from '../Charts/Donut';
 import React, { useState, useEffect } from 'react';
 
 

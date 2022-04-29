@@ -12,7 +12,8 @@ import Explore from "./pages/Explore";
 import Mission from "./pages/Mission";
 import Department from "./pages/Department";
 import Professors from "./pages/Professors";
-import ProfessorRanking from "./pages/ProfessorRanking";
+import ProfessorRanking from "./components/Professor/ProfessorRanking";
+import BestProfessors from "./components/Professor/BestProfessors";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/department" element={<Department />}></Route>
         <Route path="/professors" element={<Professors />}></Route>
         <Route path="/professorranking" element={<ProfessorRanking />}></Route>
+        <Route path="/50best" element={<BestProfessors />}></Route>
       </Routes>
     </BrowserRouter>
   );

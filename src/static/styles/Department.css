@@ -79,3 +79,18 @@ p {
   padding-bottom: -5px;
   border-radius: 25px;
 }
+
+.CenterTitle {
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+
+.centerText {
+  font-size: 80px;
+}
+
+.professors {
+  text-align: center;
+  color: white;
+}
