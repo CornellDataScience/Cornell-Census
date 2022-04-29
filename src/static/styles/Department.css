@@ -27,3 +27,70 @@ p {
   font-size: 25px;
 }
 
+.upper {
+  color: white;
+  padding-left: 14%;
+  padding-top: 50px;
+  display: inline-block;
+}
+
+.react-select-div {
+  color: black;
+  font-size: 30px;
+  width: 50%;
+  border-radius: 20px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.card-z {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+}
+
+.card-gr {
+  margin: 5%;
+}
+
+.right-upper {
+  display: inline-block;
+  float: right;
+  margin-top: 75px;
+  margin-right: 10%;
+  vertical-align: center;
+  color: black;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: -5px;
+  background-color: white;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.reviews {
+  margin-top: 75px;
+  margin-right: 20%;
+  vertical-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 20%;
+  padding-bottom: -5px;
+  border-radius: 25px;
+}
+
+.CenterTitle {
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+
+.centerText {
+  font-size: 80px;
+}
+
+.professors {
+  text-align: center;
+  color: white;
+}
