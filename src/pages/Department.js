@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import Donut from '../components/Charts/Donut';
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Row from 'react-bootstrap/Row';
 
 const Department = () => {
@@ -14,6 +13,7 @@ const Department = () => {
     const [optionItems, setOptionItems] = useState();
     const [cardItems, setCardItems] = useState();
     const [departmentName="Asian American Studies", setInfo] = useState();
+    const [checked, setChecked] = useState(false);
 
     useEffect(() => {
       fetch('/all_subjects').then(res => res.json()).then(data => {
@@ -21,6 +21,10 @@ const Department = () => {
         setOptionItems(AS.map((subject) => <option key={subject}>{subject}</option>));
       });
     }, []);
+
+    const handleCheck = () => {
+      setChecked(!checked);
+    };
 
     const handleChange = (e) => {
       setInfo(e.target.value)
@@ -31,8 +35,11 @@ const Department = () => {
           fetch(`/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
             const med_info = data.allInfo;
             setCardItems(med_info.map((info) => 
-              <Card className="card-z">{info[0]}{info[1]}{info[2]}{info[3]}
-              
+              <Card className="card-zt">
+                <Card.Title><b>{info[0]}</b></Card.Title>
+                <Card.Subtitle>Teacher: {info[1]}</Card.Subtitle>
+                <Card.Subtitle>Median Grade: <b>{info[2]}</b> ({info[3]})</Card.Subtitle>
+                <input type="checkbox" value={checked} onChange={handleCheck}/>
               </Card>
             ));
         })
@@ -50,9 +57,9 @@ const Department = () => {
               <div><select onChange={e => handleChange(e)} className='react-select-div'>{optionItems}</select></div>
             </div>
             <br></br>
-            
             <div>
-              <Row className="card-gr" xs={2} md={3}>
+              <Donut/>
+              <Row className="card-gr" xs={3} md={4}>
                   {cardItems}
               </Row>
            

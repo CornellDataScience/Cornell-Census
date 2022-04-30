@@ -4,7 +4,7 @@
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 70px;
 }
 
 .grad {
@@ -13,15 +13,6 @@ h1 {
   min-height: 100vh;
 }
 
-.title-text {
-  text-align: center;
-  padding-top: 50px;
-  font-weight: lighter;
-  font-size: 72px;
-  color: white;
-  overflow: visible;
-  z-index: 1000;
-}
 
 p {
   font-size: 25px;
@@ -29,41 +20,25 @@ p {
 
 .upper {
   color: white;
-  padding-left: 14%;
   padding-top: 50px;
-  display: inline-block;
+  text-align: center;
 }
 
 .react-select-div {
   color: black;
   font-size: 30px;
-  width: 50%;
+  width: 40%;
   border-radius: 20px;
-  margin-left: 50px;
-  margin-top: 20px;
 }
 
-.card-z {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+.card-zt {
+  box-shadow: 0 1% 1% rgba(0, 0, 0, 0.2);
   border-radius: 2em;
+  margin: 1%
 }
 
 .card-gr {
-  margin: 5%;
+  margin: 2%;
+  justify-content: center;
 }
 
-.right-upper {
-  display: inline-block;
-  float: right;
-  margin-top: 75px;
-  margin-right: 10%;
-  vertical-align: center;
-  color: black;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: -5px;
-  background-color: white;
-  border-radius: 25px;
-  text-align: center;
-}
