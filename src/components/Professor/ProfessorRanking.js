@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../static/styles/Department.css';
-import '../static/styles/master.css';
-import Navbar from '../components/Navbar';
+import '../../static/styles/Department.css';
+import '../../static/styles/master.css';
+import Navbar from '../../components/Navbar';
 import SelectSearch from 'react-select-search';
-import Donut from '../components/Charts/Donut';
+import Donut from '../Charts/Donut';
 import React, { useState, useEffect } from 'react';
 
 
-const Professors = () => {
+const ProfessorRanking = () => {
 
     const selectValue = ""
     const [optionItems, setOptionItems] = useState();
@@ -18,9 +18,9 @@ const Professors = () => {
     
 
     useEffect(() => {
-      fetch('/all_professors').then(res => res.json()).then(data => {
-        const AS=data.all_professors
-        setOptionItems(AS.sort().map((professor) => <option key={professor}>{professor[0]}</option>));
+      fetch('/all_professors2').then(res => res.json()).then(data => {
+        const AS=data.all_professors2
+        setOptionItems(AS.sort().reverse().map((professor) => <option key={professor}>{professor[1]} ({professor[0]})</option>));
       });
 
     }, []);
@@ -41,16 +41,13 @@ const Professors = () => {
           <Navbar />
           <div className="grad">
             <div className="upper">
-             <h1>{professorName}</h1>
-             <select onChange={e => handleChange(e)} className='react-select-div' placeholder="Choose A Professor">{optionItems}</select>
+            <div>
+                <p>{optionItems}</p>
+        	</div>
+             
           </div>
-           <div className="right-upper">
-           <h1>{defRating}</h1>
-            </div>
-            <div className="reviews">
-              <h1 className="review-title">Reviews</h1>
-              <p>{defReview}</p>
-            </div>
+           
+            
            
             </div>
         </div>
@@ -58,4 +55,4 @@ const Professors = () => {
     }
 
 
-  export default Professors;
+  export default ProfessorRanking;
