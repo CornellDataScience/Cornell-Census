@@ -14,6 +14,21 @@ app = Flask(__name__)
 prof_file = "./data/professor_list.csv"
 course_abbrev = "./data/courses.csv"
 course_medians = "./data/coursemedians.csv"
+gym_data = "./data/gym_list.csv"
+
+def readgymfromCSV(csv_file):
+    try:
+        with open(csv_file) as f:
+            lst = []
+            csv_reader = csv.DictReader(f)
+            for gym in csv_reader:
+                lst.append(dict(gym))
+            return lst#{'gym_list' : lst}
+    except IOError:
+        print("I/O error")
+
+gym_list = readgymfromCSV(gym_data)
+print(gym_list)
 
 def readproffromCSV(csv_file):
     try:
@@ -108,6 +123,25 @@ def GetAllProfessors2():
         if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
             profList.append([prof['overall_rating'],n, prof['review']])
     return {'all_professors2' : profList}
+
+@app.route('/gymdata', methods=['GET'])
+def GetGymData():
+    gymList = [[], [], [], [], []]
+    for gym in gym_list:
+        p = gym['count']
+        t = gym['title']
+        time = gym['time']
+        if t == "Helen Newman Fitness Center":
+            gymList[0].append(p)
+        elif t == "Teagle Down Fitness Center":
+            gymList[1].append(p)
+        elif t == "Teagle Up Fitness Center":
+            gymList[2].append(p)
+        elif t == "Noyes Fitness Center":
+            gymList[3].append(p)
+        else: ##elif t == "Toni Morrison Fitness Center":
+            gymList[4].append(p)
+    return {'gymdata' : gymList}
 
 @app.route('/get50best', methods=['GET'])
 def get50best():

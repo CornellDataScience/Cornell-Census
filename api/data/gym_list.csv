@@ -1,65 +1,54 @@
 percentage,title,count,time
-0,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 54,Teagle Down Fitness Center,27,03/20/2022 03:43
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 56.923076923077,Noyes Fitness Center,37,03/20/2022 03:43
 32,Toni Morrison Fitness Center,24,03/20/2022 03:09
-1,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 70,Teagle Down Fitness Center,35,03/20/2022 04:39
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 58.461538461538,Noyes Fitness Center,38,03/20/2022 04:45
 44,Toni Morrison Fitness Center,33,03/20/2022 04:42
-2,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 47.692307692308,Noyes Fitness Center,31,03/20/2022 05:50
 48,Toni Morrison Fitness Center,36,03/20/2022 05:45
-3,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 52.307692307692,Noyes Fitness Center,34,03/20/2022 06:47
 46.666666666667,Toni Morrison Fitness Center,35,03/20/2022 06:26
-4,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 53.846153846154,Noyes Fitness Center,35,03/20/2022 07:44
 37.333333333333,Toni Morrison Fitness Center,28,03/20/2022 07:30
-5,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 55.384615384615,Noyes Fitness Center,36,03/20/2022 08:15
 77.333333333333,Toni Morrison Fitness Center,58,03/20/2022 08:40
-6,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 47.692307692308,Noyes Fitness Center,31,03/20/2022 09:29
 76,Toni Morrison Fitness Center,57,03/20/2022 09:31
-7,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 49.230769230769,Noyes Fitness Center,32,03/20/2022 09:52
 76,Toni Morrison Fitness Center,57,03/20/2022 09:31
-8,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 49.230769230769,Noyes Fitness Center,32,03/20/2022 09:52
 76,Toni Morrison Fitness Center,57,03/20/2022 09:31
-9,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
 49.230769230769,Noyes Fitness Center,32,03/20/2022 09:52
 76,Toni Morrison Fitness Center,57,03/20/2022 09:31
-10,,,
 8.75,Helen Newman Fitness Center,7,03/18/2022 06:58
 28,Teagle Down Fitness Center,14,03/20/2022 05:18
 3.0769230769231,Teagle Up Fitness Center,2,03/18/2022 06:55
@@ -152,7 +141,6 @@ percentage,title,count,time
 10,HNH Court 1,2,03/21/2022 11:27
 0,HNH Court 2,0,03/21/2022 11:30
 (Update every 15 minutes now)
-24
 46.25,Helen Newman Fitness Center,37,03/22/2022 06:09 PM
 64,Teagle Down Fitness Center,32,03/22/2022 06:10 PM
 21.538461538462,Teagle Up Fitness Center,14,03/22/2022 06:11 PM
