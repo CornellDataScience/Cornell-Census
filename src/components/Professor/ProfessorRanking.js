@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 import SelectSearch from 'react-select-search';
 import Donut from '../Charts/Donut';
 import React, { useState, useEffect } from 'react';
+import Footer from '../Footer.js';
 
 
 const ProfessorRanking = () => {
@@ -48,8 +49,13 @@ const ProfessorRanking = () => {
           </div>
            
             
-           
+          <div className="cds2">
+        
+          <Footer />
+          <br></br>
+      </div>
             </div>
+            
         </div>
       )
     }

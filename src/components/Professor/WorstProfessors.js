@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../Footer.js';
 
 
-const BestProfessors = () => {
+const WorstProfessors = () => {
 
     const selectValue = ""
     const [optionItems, setOptionItems] = useState();
@@ -19,9 +19,9 @@ const BestProfessors = () => {
     
 
     useEffect(() => {
-      fetch('https://census-backend.herokuapp.com/get50best').then(res => res.json()).then(data => { //style={ count === 1 || count === 2 || count === 0 ? { fontSize : "60px" } : null}
-        const AS=data.get50best
-        setOptionItems(AS.sort().reverse().map((professor, count) => <option style={ count === 1 || count === 2 || count === 0 ? { fontSize : "50px", paddingBottom : "10px" } : {fontSize : "30px", paddingBottom : "5px"}} key={professor}>{count+1}. {professor[1]} ({professor[0]})</option>));
+      fetch('/get50worst').then(res => res.json()).then(data => { //style={ count === 1 || count === 2 || count === 0 ? { fontSize : "60px" } : null}
+        const AS=data.get50worst
+        setOptionItems(AS.sort().map((professor, count) => <option style={ count === 1 || count === 2 || count === 0 ? { fontSize : "50px", paddingBottom : "10px" } : {fontSize : "30px", paddingBottom : "5px"}} key={professor}>{count+1}. {professor[1]} ({professor[0]})</option>));
       });
 
     }, []);
@@ -42,7 +42,7 @@ const BestProfessors = () => {
           <Navbar />
           <div className="grad">
               <div className="CenterTitle">
-                <strong><p className="centerText">50 Best Rated Professors</p></strong>
+                <strong><p className="centerText">50 Worst Rated Professors</p></strong>
               </div>
            
             <div className="professors">
@@ -59,4 +59,4 @@ const BestProfessors = () => {
     }
 
 
-  export default BestProfessors;
+  export default WorstProfessors;

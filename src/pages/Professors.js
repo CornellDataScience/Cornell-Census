@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import SelectSearch from 'react-select-search';
 import Donut from '../components/Charts/Donut';
 import React, { useState, useEffect } from 'react';
+import Footer from '../components/Footer.js';
 
 
 const Professors = () => {
@@ -51,7 +52,11 @@ const Professors = () => {
               <h1 className="review-title">Reviews</h1>
               <p>{defReview}</p>
             </div>
-           
+            <div className="cds">
+          In collaboration with Cornell Data Science.
+          <Footer />
+          <br></br>
+      </div>
             </div>
         </div>
       )
