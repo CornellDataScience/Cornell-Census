@@ -3,7 +3,6 @@ import '../../static/styles/Department.css';
 import '../../static/styles/master.css';
 import Navbar from '../../components/Navbar';
 import SelectSearch from 'react-select-search';
-import Donut from '../Charts/Donut';
 import React, { useState, useEffect } from 'react';
 
 

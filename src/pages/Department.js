@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../static/styles/master.css';
 import '../static/styles/Department.css';
 import Navbar from '../components/Navbar';
-import Donut from '../components/Charts/Donut';
+import Donut from '../components/Department/Donut';
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
@@ -13,8 +13,11 @@ const Department = () => {
     const [optionItems, setOptionItems] = useState();
     const [cardItems, setCardItems] = useState();
     const [departmentName="Asian American Studies", setInfo] = useState();
-    const [checked, setChecked] = useState(false);
+    var checked= new Array(100).fill(false);
+    var allClass = new Array(100);
+    const [donut, setDonut] = useState();
 
+ 
     useEffect(() => {
       fetch('/all_subjects').then(res => res.json()).then(data => {
         const AS = data.all_subjects
@@ -22,11 +25,17 @@ const Department = () => {
       });
     }, []);
 
-    const handleCheck = () => {
-      setChecked(!checked);
+    const handleCheck = (pos) => {
+      for( let i =0; i < checked.length; i++){
+        if (i == pos)  checked[i] = !checked[i]
+      }
+      setDonut(<Donut checks={checked} classes={allClass}></Donut>)
+      
     };
 
     const handleChange = (e) => {
+      checked= new Array(100).fill(false);
+      allClass = new Array(100);
       setInfo(e.target.value)
       const params = {c:e.target.value}
       fetch(`/get_abbrev?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
@@ -34,14 +43,23 @@ const Department = () => {
           const params2 = {cA:data.abb}
           fetch(`/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
             const med_info = data.allInfo;
-            setCardItems(med_info.map((info) => 
+            allClass = data.allInfo;
+            setCardItems(med_info.map((info, index) => 
               <Card className="card-zt">
                 <Card.Title><b>{info[0]}</b></Card.Title>
                 <Card.Subtitle>Teacher: {info[1]}</Card.Subtitle>
                 <Card.Subtitle>Median Grade: <b>{info[2]}</b> ({info[3]})</Card.Subtitle>
-                <input type="checkbox" value={checked} onChange={handleCheck}/>
+                <Card.Body><input className="ct" id={index} name={info[0]} value={info[2]} 
+                            type="checkbox" onChange={() => handleCheck(index)}/></Card.Body>
               </Card>
             ));
+            var inputs = document.getElementsByTagName('input');
+            for (var i=0; i<inputs.length; i++)  {
+              if (inputs[i].type == 'checkbox')   {
+                inputs[i].checked = false;
+              }
+            }
+            setDonut();
         })
       })
     }
@@ -58,7 +76,9 @@ const Department = () => {
             </div>
             <br></br>
             <div>
-              <Donut/>
+              {donut}
+              <br></br><br></br>
+              <div className="upper"><h2>All Classes</h2></div>
               <Row className="card-gr" xs={3} md={4}>
                   {cardItems}
               </Row>
