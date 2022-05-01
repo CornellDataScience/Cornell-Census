@@ -4,6 +4,7 @@ import '../static/styles/master.css';
 import Navbar from '../components/Navbar';
 import SelectSearch from 'react-select-search';
 import React, { useState, useEffect } from 'react';
+import Footer from '../components/Footer.js';
 
 
 const Professors = () => {
@@ -17,7 +18,7 @@ const Professors = () => {
     
 
     useEffect(() => {
-      fetch('/all_professors').then(res => res.json()).then(data => {
+      fetch('https://census-backend.herokuapp.com/all_professors').then(res => res.json()).then(data => {
         const AS=data.all_professors
         setOptionItems(AS.sort().map((professor) => <option key={professor}>{professor[0]}</option>));
       });
@@ -27,7 +28,7 @@ const Professors = () => {
     const handleChange = (e) => {
       setInfo(e.target.value)
       const params = {c:e.target.value}
-      fetch(`/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
+      fetch(`https://census-backend.herokuapp.com/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
           setRating(data.rating); setReview(data.review);
       })
     }
@@ -50,7 +51,11 @@ const Professors = () => {
               <h1 className="review-title">Reviews</h1>
               <p>{defReview}</p>
             </div>
-           
+            <div className="cds">
+          In collaboration with Cornell Data Science.
+          <Footer />
+          <br></br>
+      </div>
             </div>
         </div>
       )

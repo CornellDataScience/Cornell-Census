@@ -51,3 +51,34 @@ input.ct {
   width:30px;
 }
 
+.reviews {
+  margin-top: 75px;
+  margin-right: 20%;
+  vertical-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 20%;
+  padding-bottom: -5px;
+  border-radius: 25px;
+}
+
+.CenterTitle {
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+
+.centerText {
+  font-size: 80px;
+}
+
+.professors {
+  text-align: center;
+  color: white;
+}
+
+.cds2 {
+  background-color: transparent;
+  padding-top: 25px;
+}

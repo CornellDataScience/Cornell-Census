@@ -3,11 +3,12 @@ import '../../static/styles/Department.css';
 import '../../static/styles/master.css';
 import Navbar from '../../components/Navbar';
 import SelectSearch from 'react-select-search';
+import Donut from '../Charts/Donut';
 import React, { useState, useEffect } from 'react';
 import Footer from '../Footer.js';
 
 
-const ProfessorRanking = () => {
+const WorstProfessors = () => {
 
     const selectValue = ""
     const [optionItems, setOptionItems] = useState();
@@ -18,9 +19,9 @@ const ProfessorRanking = () => {
     
 
     useEffect(() => {
-      fetch('/all_professors2').then(res => res.json()).then(data => {
-        const AS=data.all_professors2
-        setOptionItems(AS.sort().reverse().map((professor) => <option key={professor}>{professor[1]} ({professor[0]})</option>));
+      fetch('/get50worst').then(res => res.json()).then(data => { //style={ count === 1 || count === 2 || count === 0 ? { fontSize : "60px" } : null}
+        const AS=data.get50worst
+        setOptionItems(AS.sort().map((professor, count) => <option style={ count === 1 || count === 2 || count === 0 ? { fontSize : "50px", paddingBottom : "10px" } : {fontSize : "30px", paddingBottom : "5px"}} key={professor}>{count+1}. {professor[1]} ({professor[0]})</option>));
       });
 
     }, []);
@@ -40,16 +41,14 @@ const ProfessorRanking = () => {
         <div>
           <Navbar />
           <div className="grad">
-            <div className="upper">
-            <div>
+              <div className="CenterTitle">
+                <strong><p className="centerText">50 Worst Rated Professors</p></strong>
+              </div>
+           
+            <div className="professors">
                 <p>{optionItems}</p>
         	</div>
-             
-          </div>
-           
-            
           <div className="cds2">
-        
           <Footer />
           <br></br>
       </div>
@@ -60,4 +59,4 @@ const ProfessorRanking = () => {
     }
 
 
-  export default ProfessorRanking;
+  export default WorstProfessors;

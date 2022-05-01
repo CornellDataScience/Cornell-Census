@@ -27,8 +27,8 @@ function Explore() {
         <div className="cont1">
             <div className="contents-left">
                 <strong><p className="div-title">Professors</p></strong>
-                <p>View 50 Highest Rated Cornell Professors</p>
-                <p>View 50 Lowest Rated Cornell Professors</p>
+                <a href="/50best"><p>View 50 Highest Rated Cornell Professors</p></a>
+                <a href="/50worst"><p>View 50 Worst Rated Cornell Professors</p></a>
                 <p>David Han</p>
             </div>
             <div className="contents-right">
