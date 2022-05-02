@@ -12,6 +12,10 @@ import Explore from "./pages/Explore";
 import Mission from "./pages/Mission";
 import Gym from "./pages/Gym";
 import Department from "./pages/Department";
+import Professors from "./pages/Professors";
+import ProfessorRanking from "./components/Professor/ProfessorRanking";
+import BestProfessors from "./components/Professor/BestProfessors";
+import WorstProfessors from "./components/Professor/WorstProfessors";
 
 export default function App() {
   return (
@@ -24,6 +28,10 @@ export default function App() {
         <Route path="/mission" element={<Mission />}></Route>
         <Route path="/gym" element={<Gym />}></Route>
         <Route path="/department" element={<Department />}></Route>
+        <Route path="/professors" element={<Professors />}></Route>
+        <Route path="/professorranking" element={<ProfessorRanking />}></Route>
+        <Route path="/50best" element={<BestProfessors />}></Route>
+        <Route path="/50worst" element={<WorstProfessors />}></Route>
       </Routes>
     </BrowserRouter>
   );

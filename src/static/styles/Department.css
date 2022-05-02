@@ -4,7 +4,11 @@
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 50px;
 }
 
 .grad {
@@ -13,17 +17,68 @@ h1 {
   min-height: 100vh;
 }
 
-.title-text {
-  text-align: center;
-  padding-top: 50px;
-  font-weight: lighter;
-  font-size: 72px;
-  color: white;
-  overflow: visible;
-  z-index: 1000;
-}
 
 p {
   font-size: 25px;
 }
 
+.upper {
+  color: white;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.react-select-div {
+  color: black;
+  font-size: 30px;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.card-zt {
+  box-shadow: 0 1% 1% rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+  margin: 1%
+}
+
+.card-gr {
+  margin: 2%;
+  justify-content: center;
+}
+
+input.ct {
+  height:30px;
+  width:30px;
+}
+
+.reviews {
+  margin-top: 75px;
+  margin-right: 20%;
+  vertical-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 20%;
+  padding-bottom: -5px;
+  border-radius: 25px;
+}
+
+.CenterTitle {
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+
+.centerText {
+  font-size: 80px;
+}
+
+.professors {
+  text-align: center;
+  color: white;
+}
+
+.cds2 {
+  background-color: transparent;
+  padding-top: 25px;
+}

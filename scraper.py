@@ -38,7 +38,7 @@ class RateMyProfScraper:
 
         # adds list of professors to csv file.
         def addproftoCSV(self, proflist):
-            csv_file = "professor_list.csv"
+            csv_file = "professor_list_2.csv"
             try:
                 with open(csv_file, 'w') as f:
                     writer = csv.writer(f)
@@ -47,6 +47,66 @@ class RateMyProfScraper:
                         writer.writerow(list(prof.values()))
             except IOError:
                 print("I/O error")
+
+        def readgymfromCSV():
+            csv_file = "gym_list.csv"
+            try:
+                with open(csv_file) as f:
+                    lst = []
+                    csv_reader = csv.DictReader(f)
+                    for gym in csv_reader:
+                        lst.append(dict(gym))
+                    return lst
+            except IOError:
+                print("I/O error")
+
+        # adds list of professors to csv file.
+        def addgymtoCSV( gymlist):
+            csv_file = "gym_list.csv"
+            try:
+                with open(csv_file, 'a') as f:
+                    writer = csv.writer(f)
+                    for gym in gymlist:
+                        writer.writerow(list(gym.values()))
+            except IOError:
+                print("I/O error")
+
+# get more reviews ratemyprof
+# https://connect2concepts.com/connect2/?type=circle&key=355de24d-d0e4-4262-ae97-bc0c78b92839&loc_status=false
+
+        def addgymlist():#creates List object that include basic information on all Professors from the IDed University
+            tempgymlist = []
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0',
+            }
+            page = requests.get(
+                    "https://connect2concepts.com/connect2/?type=circle&key=355de24d-d0e4-4262-ae97-bc0c78b92839&loc_status=false", headers=headers)
+            s = str(page.content)
+            # print(s)
+            percentage_key = 'data-percent'
+            while (percentage_key in s):
+                gym = {}
+                percentage_idx = s.find(percentage_key)
+                percentage_end_idx = s.find('data-isclosed', percentage_idx, len(page.content)-1)
+                gym['percentage'] = html.unescape(s[percentage_idx+len(percentage_key)+2:percentage_end_idx-2])
+                print(gym['percentage'])
+                content_key = '<div style="text-align:center;">'
+                content_idx = s.find(content_key, percentage_end_idx, len(page.content)-1)
+                content_end_idx = s.find('</div>', content_idx, len(page.content)-1)
+                content = html.unescape(s[content_idx+len(content_key):content_end_idx])
+                print(content)
+                break_idx = content.find('<br/>', 0, len(content)-1)
+                gym['title'] = html.unescape(content[0:break_idx])
+                content = content[break_idx + 5 + len('Last Count: '): len(content)-1]
+                break_idx = content.find('<br/>', 0, len(content)-1)
+                gym['count'] = html.unescape(content[0:break_idx])
+                content = content[break_idx + 5 + len('Updated: '): len(content)-1]
+                break_idx = content.find('<br/>', 0, len(content)-1)
+                gym['time'] = html.unescape(content[0:break_idx])
+                s = s[content_end_idx:len(s)-1]
+                tempgymlist.append(gym)
+            RateMyProfScraper.addgymtoCSV(tempgymlist)
+            return tempgymlist
 
         def createprofessorlist(self):#creates List object that include basic information on all Professors from the IDed University
             tempprofessorlist = []
@@ -70,23 +130,47 @@ class RateMyProfScraper:
                 s = str(page.content)
                 rating_key = "CardNumRating__CardNumRatingNumber-sc-17t4b9u-2 kMhQxZ"
                 quality_rating_idx = s.find(rating_key)
-                end_idx = s.find('</div>', quality_rating_idx, len(page.content)-1)
-                teacher['review_quality_rating'] = html.unescape(s[quality_rating_idx+len(rating_key)+2:end_idx])
+                if(quality_rating_idx != -1):
+                    end_idx = s.find('</div>', quality_rating_idx, len(page.content)-1)
+                    teacher['review_quality_rating'] = html.unescape(s[quality_rating_idx+len(rating_key)+2:end_idx])
+                else:
+                    teacher['review_quality_rating'] = ''
                 difficulty_rating_idx = s.find(rating_key, quality_rating_idx, len(page.content)-1)
-                end_idx = s.find('</div>', difficulty_rating_idx, len(page.content)-1)
-                teacher['review_difficulty_rating'] = html.unescape(s[difficulty_rating_idx+len(rating_key)+2:end_idx])
+                if(difficulty_rating_idx != -1):
+                    end_idx = s.find('</div>', difficulty_rating_idx, len(page.content)-1)
+                    teacher['review_difficulty_rating'] = html.unescape(s[difficulty_rating_idx+len(rating_key)+2:end_idx])
+                else:
+                    teacher['review_difficulty_rating'] = ''
                 class_key = "<RatingHeader__StyledClass-sc-1dlkqw1-2 gxDIt"
                 class_idx = s.find(class_key)
-                end_idx = s.find('</div>', class_idx, len(page.content)-1)
-                teacher['review_class'] = html.unescape(s[class_idx+len(class_key)+2:end_idx])
+                if(class_idx != -1):
+                    end_idx = s.find('</div>', class_idx, len(page.content)-1)
+                    teacher['review_class'] = html.unescape(s[class_idx+len(class_key)+2:end_idx])
+                else:
+                    teacher['review_class'] = ''
                 key = 'Comments__StyledComments-dzzyvm-0 gRjWel'
                 idx = s.find(key)
                 if(idx != -1):
                     end_idx = s.find('</div>', idx, len(page.content)-1)
-                    teacher['Review'] = html.unescape(s[idx+len(key)+2:end_idx])
+                    teacher['Review_1'] = html.unescape(s[idx+len(key)+2:end_idx])
+                    s = s[end_idx:len(s)-1]
                 else:
-                    teacher['Review'] = ''
-                # print(teacher)
+                    teacher['Review_1'] = ''
+                idx = s.find(key)
+                if(idx != -1):
+                    end_idx = s.find('</div>', idx, len(page.content)-1)
+                    teacher['Review_2'] = html.unescape(s[idx+len(key)+2:end_idx])
+                    s = s[end_idx:len(s)]
+                else:
+                    teacher['Review_2'] = ''
+                idx = s.find(key)
+                if(idx != -1):
+                    end_idx = s.find('</div>', idx, len(page.content)-1)
+                    teacher['Review_3'] = html.unescape(s[idx+len(key)+2:end_idx])
+                    s = s[end_idx:len(s)]
+                else:
+                    teacher['Review_3'] = ''
+                print(teacher)
             self.addproftoCSV(tempprofessorlist)
             return tempprofessorlist
 
@@ -153,7 +237,7 @@ class RateMyProfScraper:
                 return self.professorlist[self.indexnumber][key]
 
 # Once a database is created, we can load the info into a database and read from there, so that it doesn't take 20 minutes to run.
-Cornell = RateMyProfScraper(298, True)
-print(Cornell.GetAllSubjects())
+Cornell = RateMyProfScraper(298, False)
+# print(RateMyProfScraper.readgymfromCSV())
 # print(RateMyProfScraper.readproffromCSV())
 

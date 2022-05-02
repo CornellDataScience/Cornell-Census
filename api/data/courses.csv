@@ -1,192 +1,186 @@
-﻿AAS,Asian American Studies,
-AEM,Applied Economics & Management,
-AEP,Applied & Engineering Physics,
-AGSCI,Agricultural Sciences,
-AIIS,American Indian and Indigenous Studies,
-AIRS,Aerospace Studies,
-AKKAD,Akkadian,
-ALS,Agriculture & Life Sciences,
-AMST,American Studies,
-ANSC,Animal Science,
-ANTHR,Anthropology,
-ARAB,Arabic,
-ARCH,Architecture,
-ARKEO,Archaeology,
-ART,Art,
-ARTH,History of Art,
-AS,Arts & Sciences,
-ASIAN,Asian Studies,
-ASL,American Sign Language,
-ASRC,Africana Studies & Research Center,
-ASTRO,Astronomy,
-BCS,"Bosnian, Croatian, Serbian",
-BEE,Biological & Environmental Engineering,
-BENGL,Bengali,
-BIOAP,Animal Physiology & Anatomy,
-BIOEE,Ecology & Evolutionary Biology,
-BIOG,Biology: General Courses,
-BIOMG,Molecular Biology and Genetics,
-BIOMI,Microbiology,
-BIOMS,Biomedical Sciences,
-BIONB,Neurobiology & Behavior,
-BME,Biomedical Engineering,
-BSOC,Biology & Society,
-BTRY,Biometry & Statistics,
-BURM,Burmese,
-CAPS,China & Asia Pacific Studies,
-CEE,Civil & Environmental Engineering,
-CHEM,Chemistry,
-CHEME,Chemical Engineering,
-CHIN,Chinese,
-CHLIT,Chinese Literature,
-CLASS,Classics,
-COGST,Cognitive Science,
-COLLS,College Scholar Program,
-COML,Comparative Literature,
-COMM,Communication,
-CRP,City & Regional Planning,
-CS,Computer Science,
-CZECH,Czech,
-DEA,Design & Environmental Analysis,
-DESIGN,Design,
-DSOC,Development Sociology,
-DUTCH,Dutch,
-EAS,Earth & Atmospheric Sciences,
-ECE,Electrical & Computer Engineering,
-ECON,Economics,
-EDUC,Education,
-ELSO,English Language Support,
-ENGL,English,
-ENGRC,Engineering Communications,
-ENGRD,Engineering Distribution,
-ENGRG,Engineering General Interest,
-ENGRI,Engineering Introduction,
-ENMGT,Engineering Management,
-ENTOM,Entomology,
-ENVS,Environment & Sustainability,
-FDSC,Food Science,
-FGSS,"Feminist, Gender & Sexuality Studies",
-FINN,Finnish,
-FREN,French,
-FSAD,Fiber Science & Apparel Design,
-GERST,German Studies,
-GOVT,Government,
-GRAD,Graduate Research,
-GREEK,Greek,
-HADM,Hotel Administration,
-HD,Human Development,
-HE,Human Ecology Nondepartmental,
-HEBRW,Hebrew,
-HINDI,Hindi,
-HIST,History,
-HUNGR,Hungarian,
-IARD,International Agriculture & Rural Development,
-ILRHR,Human Resource Studies,
-ILRIC,International & Comparative Labor,
-ILRID,Industrial and Labor Relations Interdepartmental,
-ILRLE,Labor Economics,
-ILRLR,"Labor Relations, Law and History",
-ILROB,Organizational Behavior,
-ILRST,Social Statistics,
-IM,Independent Major,
-INDO,Indonesian,
-INFO,Information Science,0
-ITAL,Italian,
-JAPAN,Japanese,
-JPLIT,Japanese Literature,
-JWST,Jewish Studies,
-KANAD,Kannada,
-KHMER,Khmer,
-KOREA,Korean,
-LA,Landscape Architecture,
-LATA,Latin American Studies,
-LATIN,Latin,
-LAW,Law,
-LEAD,Leadership,
-LEGAL,Legal Studies,
-LGBT,"Lesbian, Gay, Bisexual & Transgender Studies",
-LING,Linguistics,
-LSP,Latino Studies Program,
-MAE,Mechanical & Aerospace Engineering,
-MATH,Mathematics,
-MEDVL,Medieval Studies,
-MGMT,Graduate Management,
-MILS,Military Science,
-MSE,Materials Science & Engineering,
-MUSIC,Music,
-NACCT,Graduate Management Accounting,
-NAVS,Naval Science,
-NBA,Graduate Management Business Admin,
-NBAY,Graduate Management Business Admin NYT,
-NCC,Graduate Management Common Core,
-NEPAL,Nepali,
-NES,Near Eastern Studies,
-NMI,Graduate Management Individualized Study,
-NRE,Graduate Management Research,
-NS,Nutritional Science,
-NSE,Nuclear Science & Engineering,
-NTRES,Natural Resources,
-ORIE,Operations Research & Information Engineering,
-PADM,Public Administration,
-PAM,Policy Analysis and Management,
-PE,Physical Education & Athletics,
-PERSN,Persian,
-PHIL,Philosophy,
-PHYS,Physics,
-PLBIO,Plant Biology,
-PLBRG,Plant Breeding,
-PLHRT,Horticulture Sciences,
-PLPPM,Plant Pathology,
-PLSCI,Plant Sciences,
-PLSCS,Soil & Crop Sciences,
-PMA,Performing and Media Arts,
-POLSH,Polish,
-PORT,Portuguese,
-PSYCH,Psychology,
-PUNJB,Punjabi,
-QUECH,Quechua,
-RELST,Religious Studies,
-ROMS,Romance Studies,
-RUSSA,Russian,
-RUSSL,Russian Literature,
-SANSK,Sanskrit,
-SHUM,Society for the Humanities,
-SINHA,Sinhala,
-SNLIT,Sanskrit Literature,
-SOC,Sociology,
-SPAN,Spanish,
-STS,Science & Technology Studies,
-STSCI,Statistical Science,
-SWAHL,Swahili,
-SWED,Swedish,
-SYSEN,Systems Engineering,
-TAG,Tagalog,
-TAMIL,Tamil,
-TECH,Digital Technology & Practice,
-THAI,Thai,
-TIBET,Tibetan,
-TOX,Toxicology,
-TURK,Turkish,
-UKRAN,Ukrainian,
-UNILWYL,Learning Where you Live,
-UNIV,Cornell University General Studies,
-URDU,Urdu,
-VETCS,Veterinary Medicine Clinical Sciences,
-VETMI,Veterinary Medicine Microbiology,
-VIEN,Viticulture and Enology,
-VIET,Vietnamese,
-VISST,Visual Studies,
-VTBMS,Veterinary Medicine BioMedical Sciences,
-VTMED,Veterinary Medicine Professional Curriculum,
-VTPMD,Vet Med Population Medicine & Diagnostic Services,
-WOLOF,Wolof,
-WRIT,Writing Program,
-YORUB,Yoruba,
-ZULU,Zulu,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
+﻿Course,Abbrev
+Aerospace Studies,AIRS
+Africana Studies & Research Center,ASRC
+Agricultural Sciences,AGSCI
+Agriculture & Life Sciences,ALS
+Akkadian,AKKAD
+American Indian and Indigenous Studies,AIIS
+American Sign Language,ASL
+American Studies,AMST
+Animal Physiology & Anatomy,BIOAP
+Animal Science,ANSC
+Anthropology,ANTHR
+Applied & Engineering Physics,AEP
+Applied Economics & Management,AEM
+Arabic,ARAB
+Archaeology,ARKEO
+Architecture,ARCH
+Art,ART
+Arts & Sciences,AS
+Asian American Studies,AAS
+Asian Studies,ASIAN
+Astronomy,ASTRO
+Bengali,BENGL
+Biological & Environmental Engineering,BEE
+Biology & Society,BSOC
+Biology: General Courses,BIOG
+Biomedical Engineering,BME
+Biomedical Sciences,BIOMS
+Biometry & Statistics,BTRY
+"Bosnian, Croatian, Serbian",BCS
+Burmese,BURM
+Chemical Engineering,CHEME
+Chemistry,CHEM
+China & Asia Pacific Studies,CAPS
+Chinese,CHIN
+Chinese Literature,CHLIT
+City & Regional Planning,CRP
+Civil & Environmental Engineering,CEE
+Classics,CLASS
+Cognitive Science,COGST
+College Scholar Program,COLLS
+Communication,COMM
+Comparative Literature,COML
+Computer Science,CS
+Cornell University General Studies,UNIV
+Czech,CZECH
+Design,DESIGN
+Design & Environmental Analysis,DEA
+Development Sociology,DSOC
+Digital Technology & Practice,TECH
+Dutch,DUTCH
+Earth & Atmospheric Sciences,EAS
+Ecology & Evolutionary Biology,BIOEE
+Economics,ECON
+Education,EDUC
+Electrical & Computer Engineering,ECE
+Engineering Communications,ENGRC
+Engineering Distribution,ENGRD
+Engineering General Interest,ENGRG
+Engineering Introduction,ENGRI
+Engineering Management,ENMGT
+English,ENGL
+English Language Support,ELSO
+Entomology,ENTOM
+Environment & Sustainability,ENVS
+"Feminist, Gender & Sexuality Studies",FGSS
+Fiber Science & Apparel Design,FSAD
+Finnish,FINN
+Food Science,FDSC
+French,FREN
+German Studies,GERST
+Government,GOVT
+Graduate Management,MGMT
+Graduate Management Accounting,NACCT
+Graduate Management Business Admin,NBA
+Graduate Management Business Admin NYT,NBAY
+Graduate Management Common Core,NCC
+Graduate Management Individualized Study,NMI
+Graduate Management Research,NRE
+Graduate Research,GRAD
+Greek,GREEK
+Hebrew,HEBRW
+Hindi,HINDI
+History,HIST
+History of Art,ARTH
+Horticulture Sciences,PLHRT
+Hotel Administration,HADM
+Human Development,HD
+Human Ecology Nondepartmental,HE
+Human Resource Studies,ILRHR
+Hungarian,HUNGR
+Independent Major,IM
+Indonesian,INDO
+Industrial and Labor Relations Interdepartmental,ILRID
+Information Science,INFO
+International & Comparative Labor,ILRIC
+International Agriculture & Rural Development,IARD
+Italian,ITAL
+Japanese,JAPAN
+Japanese Literature,JPLIT
+Jewish Studies,JWST
+Kannada,KANAD
+Khmer,KHMER
+Korean,KOREA
+Labor Economics,ILRLE
+"Labor Relations, Law and History",ILRLR
+Landscape Architecture,LA
+Latin,LATIN
+Latin American Studies,LATA
+Latino Studies Program,LSP
+Law,LAW
+Leadership,LEAD
+Learning Where you Live,UNILWYL
+Legal Studies,LEGAL
+"Lesbian, Gay, Bisexual & Transgender Studies",LGBT
+Linguistics,LING
+Materials Science & Engineering,MSE
+Mathematics,MATH
+Mechanical & Aerospace Engineering,MAE
+Medieval Studies,MEDVL
+Microbiology,BIOMI
+Military Science,MILS
+Molecular Biology and Genetics,BIOMG
+Music,MUSIC
+Natural Resources,NTRES
+Naval Science,NAVS
+Near Eastern Studies,NES
+Nepali,NEPAL
+Neurobiology & Behavior,BIONB
+Nuclear Science & Engineering,NSE
+Nutritional Science,NS
+Operations Research & Information Engineering,ORIE
+Organizational Behavior,ILROB
+Performing and Media Arts,PMA
+Persian,PERSN
+Philosophy,PHIL
+Physical Education & Athletics,PE
+Physics,PHYS
+Plant Biology,PLBIO
+Plant Breeding,PLBRG
+Plant Pathology,PLPPM
+Plant Sciences,PLSCI
+Policy Analysis and Management,PAM
+Polish,POLSH
+Portuguese,PORT
+Psychology,PSYCH
+Public Administration,PADM
+Punjabi,PUNJB
+Quechua,QUECH
+Religious Studies,RELST
+Romance Studies,ROMS
+Russian,RUSSA
+Russian Literature,RUSSL
+Sanskrit,SANSK
+Sanskrit Literature,SNLIT
+Science & Technology Studies,STS
+Sinhala,SINHA
+Social Statistics,ILRST
+Society for the Humanities,SHUM
+Sociology,SOC
+Soil & Crop Sciences,PLSCS
+Spanish,SPAN
+Statistical Science,STSCI
+Swahili,SWAHL
+Swedish,SWED
+Systems Engineering,SYSEN
+Tagalog,TAG
+Tamil,TAMIL
+Thai,THAI
+Tibetan,TIBET
+Toxicology,TOX
+Turkish,TURK
+Ukrainian,UKRAN
+Urdu,URDU
+Vet Med Population Medicine & Diagnostic Services,VTPMD
+Veterinary Medicine BioMedical Sciences,VTBMS
+Veterinary Medicine Clinical Sciences,VETCS
+Veterinary Medicine Microbiology,VETMI
+Veterinary Medicine Professional Curriculum,VTMED
+Vietnamese,VIET
+Visual Studies,VISST
+Viticulture and Enology,VIEN
+Wolof,WOLOF
+Writing Program,WRIT
+Yoruba,YORUB
+Zulu,ZULU
