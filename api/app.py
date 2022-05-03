@@ -37,6 +37,7 @@ def readgymfromCSV(csv_file):
 
 gym_list = readgymfromCSV(gym_file)
 print(gym_list)
+
 def readproffromCSV(csv_file):
     try:
         with open(csv_file) as f:
@@ -183,4 +184,6 @@ def pullRating():
         if n == prof and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != ".":
             return {'rating' : p['overall_rating'], 'review': p['review']}
 
-
+@app.route('/pull_gyms', methods=['GET'])
+def getGyms():
+    return {'gym_list':gym_list}
