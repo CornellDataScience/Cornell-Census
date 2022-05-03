@@ -34,7 +34,7 @@ Number,Dept,Professor,Median Grade,Semester,# of Students,Notes
 576,PHYS 2218,Wittich,A-,FA21,55,
 308,ENGRD 2700,Callister,A,FA21,204,
 580,PHYS 3316,Arias,B+,FA21,27,
-295,ENGL 1170 (FWS: Short Stories),Various (FWS),A,FA21,151,
+295,ENGL 1170,Various (FWS),A,FA21,151,
 256,ECE 2300,Helbling,B+,FA21,113,crosslisted with ENGRD 2300
 253,ECE 2100,Shealy,A-,FA21,72,"crosslisted with ENGRD 2100, Professor Shealy's last semester teaching"
 249,EAS 4470,Pendergrass,B,FA21,24,
@@ -47,9 +47,9 @@ Number,Dept,Professor,Median Grade,Semester,# of Students,Notes
 179,CS 1112,Fan,B,FA21,,
 178,CS 1110,White,B+,FA21,743,
 603,SOC 1101,Schnabel,A,FA21,282,
-172,COML 1119 (FWS: Russian Lit),Krivitsky,A,FA21,17,
+172,COML 1119,Krivitsky,A,FA21,17,
 604,SOC 2070,Rich,A,FA21,141,Crosslisted with AMST 2070 and PAM 2250
-167,COML 1104 (FWS: Reading Films),Monroe,A-,FA21,34,
+167,COML 1104,Monroe,A-,FA21,34,
 166,CLASS 2604,Clary,A,FA21,182,
 162,CHIN 2209,George,A-,FA21,42,
 197,CS 3410,Bracy,B+,FA21,242,
@@ -114,7 +114,7 @@ Number,Dept,Professor,Median Grade,Semester,# of Students,Notes
 432,ITAL 2201,Baraldi/Von Wittlesbach,A,FA21,64,class size is actually 10-15 people as there are multiple time sessions available
 430,INFO 4940,Cleare,A+,FA21,87,Special Topic: Project Management
 396,HIST 1561,Minawi,A-,FA21,18,Prof teaches class like a seminar. no discussions. exact course unlikely to be offered in the future according to professor
-390,HIST 1200 (FWS: Globalization in the Persian Gulf),Ocampo,A,FA21,105,
+390,HIST 1200,Ocampo,A,FA21,105,
 385,HD 2350,Kedar,A,FA21,28,
 560,PHYS 1101,Giambattista/Taylor,B+,FA21,184,
 381,HD 1150,Sternberg,A-,FA21,241,

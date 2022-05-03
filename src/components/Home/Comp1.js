@@ -3,8 +3,21 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CardGroup from 'react-bootstrap/CardGroup';
+import React, { useState, useEffect } from 'react';
 
 const Comp1 = () => {
+  const [optionItems, setOptionItems] = useState();
+  const [optionItems2, setOptionItems2] = useState();
+  useEffect(() => {
+    fetch('/get_median_home').then(res => res.json()).then(data => {
+      const AS=data.retCourseInfo
+      console.log(AS);
+      setOptionItems(AS.map((info) => <p>{info[0]}</p>));
+      setOptionItems2(AS.map((info2) => <h1>{info2[1]}</h1>));
+    });
+
+  }, []);
+
   return (
     <div className="outline">
       <div className="row">
@@ -19,43 +32,70 @@ const Comp1 = () => {
 
         </div>
         <div className="col" style={{marginRight: "20px"}}>
-          <br></br>
-          <CardGroup className="card-g">
-          <Row xs={2} md={3}>
-            {Array.from({ length: 3 }).map((_, idx) => (
-              <Col>
-                <Card className="card-t" style={{ borderRadius: 25 }}>
+        
+                <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
                   <Card.Body>
-                    <Card.Title><strong><p className="courseTitle">CS 1110</p></strong></Card.Title>
+                    <Card.Title><strong><p className="courseTitle">{(optionItems[0])}</p></strong></Card.Title>
                     <Card.Text>
                       <div className="inBox">
-                        <h1 className="gradeB">B+</h1>
+                        <h1 className="gradeB">{optionItems2[0]}</h1>
                       </div> 
                     </Card.Text>
                   </Card.Body>
                 </Card>
-              </Col>
-            ))}
-          </Row>
-          </CardGroup>
-          <CardGroup className="card-g">
-          <Row xs={2} md={3}>
-            {Array.from({ length: 3 }).map((_, idx) => (
-              <Col>
-                <Card className="card-t" style={{ borderRadius: 25 }}>
+                <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
                   <Card.Body>
-                    <Card.Title><strong><p className="courseTitle">CS 2110</p></strong></Card.Title>
+                    <Card.Title><strong><p className="courseTitle">{(optionItems[1])}</p></strong></Card.Title>
                     <Card.Text>
                       <div className="inBox">
-                        <h1 className="grade">A-</h1>
-                       </div> 
+                        <h1 className="gradeB">{optionItems2[1]}</h1>
+                      </div> 
                     </Card.Text>
                   </Card.Body>
                 </Card>
-              </Col>
-            ))}
-          </Row>
-          </CardGroup>
+                <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
+                  <Card.Body>
+                    <Card.Title><strong><p className="courseTitle">{(optionItems[2])}</p></strong></Card.Title>
+                    <Card.Text>
+                      <div className="inBox">
+                        <h1 className="gradeB">{optionItems2[2]}</h1>
+                      </div> 
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+        <div style={{marginRight: "20px"}}>
+         
+                <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
+                  <Card.Body>
+                    <Card.Title><strong><p className="courseTitle">{(optionItems[3])}</p></strong></Card.Title>
+                    <Card.Text>
+                      <div className="inBox">
+                        <h1 className="gradeB">{optionItems2[3]}</h1>
+                      </div> 
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+                <Card className="card-t" style={{ borderRadius: 25 , display: "inline-block", verticalAlign: "center"}}>
+                  <Card.Body>
+                    <Card.Title><strong><p className="courseTitle">{(optionItems[4])}</p></strong></Card.Title>
+                    <Card.Text>
+                      <div className="inBox">
+                        <h1 className="gradeB">{optionItems2[4]}</h1>
+                      </div> 
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+                <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
+                  <Card.Body>
+                    <Card.Title><strong><p className="courseTitle">{(optionItems[5])}</p></strong></Card.Title>
+                    <Card.Text>
+                      <div className="inBox">
+                        <h1 className="gradeB">{optionItems2[5]}</h1>
+                      </div> 
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+        </div>
         </div>
       </div>
     </div>

@@ -86,6 +86,23 @@ def medianInfo():
             allInfo.append([mI['Dept'], mI['Professor'], mI['Median Grade'], mI['Semester'], mI['# of Students']])
     return {'allInfo' : allInfo}
 
+import random
+
+@app.route('/get_median_home', methods=['GET'])
+def medianHome():
+    allInfo2 = []
+    for mI in medians_list:
+            allInfo2.append([mI['Dept'], mI['Median Grade']])
+    retCourse=[]
+    for i in range(6):
+        k = random.randint(0, len(allInfo2))
+        if k not in retCourse:
+            retCourse.append(k)
+    retCourseInfo=[]
+    for j in retCourse:
+        retCourseInfo.append(allInfo2[j])
+    return {'retCourseInfo' : retCourseInfo}
+
 
 @app.route('/get_abbrev', methods=['GET'])
 def abbrev():
