@@ -14,7 +14,29 @@ app = Flask(__name__)
 prof_file = "./data/professor_list.csv"
 course_abbrev = "./data/courses.csv"
 course_medians = "./data/coursemedians.csv"
+gym_file = "./data/gym_list.csv"
 
+def readgymfromCSV(csv_file):
+    try:
+        with open(csv_file) as f:
+            lst = []
+            csv_reader = csv.DictReader(f)
+            for gym in csv_reader:
+                lst.append(dict(gym))
+            gyms = {"Helen Newman Fitness Center":[], "Teagle Down Fitness Center":[],
+            "Teagle Up Fitness Center":[],"Noyes Fitness Center":[],
+            "Toni Morrison Fitness Center":[],"HNH Court 1":[],"HNH Court 2":[]}
+            # print(lst)
+            for gym in lst:
+                # print(gym)
+                if gym['title'] in gyms:
+                    gyms[gym['title']].append((gym['percentage'], gym['count'], gym['time'])) 
+            return gyms
+    except IOError:
+        print("I/O error")
+
+gym_list = readgymfromCSV(gym_file)
+print(gym_list)
 def readproffromCSV(csv_file):
     try:
         with open(csv_file) as f:
