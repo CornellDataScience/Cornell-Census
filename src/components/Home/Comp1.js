@@ -31,14 +31,13 @@ const Comp1 = () => {
       
 
         </div>
-        <div className="col" style={{marginRight: "20px"}}>
-        
+        <div className="col" style={{}}>
                 <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
                   <Card.Body>
                     <Card.Title><strong><p className="courseTitle">{optionItems[0]}</p></strong></Card.Title>
                     <Card.Text>
                       <div className="inBox">
-                        <h1 className="gradeB">{optionItems2[0]}</h1>
+                        <h1 className="gradeB" style={{}}>{optionItems2[0]}</h1>
                       </div> 
                     </Card.Text>
                   </Card.Body>
@@ -63,7 +62,7 @@ const Comp1 = () => {
                     </Card.Text>
                   </Card.Body>
                 </Card>
-        <div style={{marginRight: "20px"}}>
+        <div style={{}}>
          
                 <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
                   <Card.Body>
