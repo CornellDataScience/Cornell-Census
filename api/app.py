@@ -204,10 +204,9 @@ def pullRating():
 @app.route('/pull_gyms', methods=['GET'])
 def getGyms():
     gyms = gym_list
-    for gym in gyms:
+    for gym in gyms.keys():
+        for i in range(3, len(gyms[gym])):
+            if gyms[gym][i][2] == gyms[gym][i-1][2] and  gyms[gym][i][2] == gyms[gym][i-2][2] and gyms[gym][i][2] == gyms[gym][i-3][2]:
+                gyms[gym][i-3] = (0,0,gyms[gym][i-3][2])
 
-        for i in range(1,len(gyms[gym])):
-            if gyms[gym][i-1][2] == gyms[gym][i][2]:
-                gyms[gym][i][0] = '0'
-                gyms[gym][i][1] = '0'
     return {'gym_list':gyms}
