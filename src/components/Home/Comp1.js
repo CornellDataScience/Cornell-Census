@@ -6,8 +6,8 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import React, { useState, useEffect } from 'react';
 
 const Comp1 = () => {
-  const [optionItems, setOptionItems] = useState();
-  const [optionItems2, setOptionItems2] = useState();
+  let [optionItems=["CS 1110", "CS 2110", "CS 3110", "CS 3410", "CS 4820", "CS 4410"], setOptionItems] = useState();
+  const [optionItems2=["A-", "B+", "B", "B-", "A", "A-"], setOptionItems2] = useState();
   useEffect(() => {
     fetch('/get_median_home').then(res => res.json()).then(data => {
       const AS=data.retCourseInfo
@@ -35,7 +35,7 @@ const Comp1 = () => {
         
                 <Card className="card-t" style={{ borderRadius: 25, display: "inline-block", verticalAlign: "center" }}>
                   <Card.Body>
-                    <Card.Title><strong><p className="courseTitle">{(optionItems[0])}</p></strong></Card.Title>
+                    <Card.Title><strong><p className="courseTitle">{optionItems[0]}</p></strong></Card.Title>
                     <Card.Text>
                       <div className="inBox">
                         <h1 className="gradeB">{optionItems2[0]}</h1>
