@@ -186,4 +186,11 @@ def pullRating():
 
 @app.route('/pull_gyms', methods=['GET'])
 def getGyms():
-    return {'gym_list':gym_list}
+    gyms = gym_list
+    for gym in gyms:
+
+        for i in range(1,len(gyms[gym])):
+            if gyms[gym][i-1][2] == gyms[gym][i][2]:
+                gyms[gym][i][0] = '0'
+                gyms[gym][i][1] = '0'
+    return {'gym_list':gyms}
