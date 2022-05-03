@@ -46,7 +46,7 @@ const Department = () => {
             allClass = data.allInfo;
             setCardItems(med_info.map((info, index) => 
               <Card className="card-zt">
-                <Card.Title><b>{info[0]}</b></Card.Title>
+                <Card.Title style={{paddingTop:"20px"}}><b>{info[0]}</b></Card.Title>
                 <Card.Subtitle>Teacher: {info[1]}</Card.Subtitle>
                 <Card.Subtitle>Median Grade: <b>{info[2]}</b> ({info[3]})</Card.Subtitle>
                 <Card.Body><input className="ct" id={index} name={info[0]} value={info[2]} 
