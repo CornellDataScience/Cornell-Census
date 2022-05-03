@@ -1,0 +1,35 @@
+.cont1 {
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+.contents-left {
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: "Inter", sans-serif;
+  display: inline-block;
+}
+
+.contents-right {
+  float: right;
+  padding-top: 23%;
+  padding-right: 5%;
+}
+
+.div-title {
+  font-size: 50px;
+}
+
+.foot {
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: -20px;
+  background-color: transparent;
+}
+
+.cds {
+  background-color: transparent;
+}
