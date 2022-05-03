@@ -82,7 +82,10 @@ const Department = () => {
               <Row className="card-gr" xs={3} md={4}>
                   {cardItems}
               </Row>
-           
+
+            <div style={{height: "100px"}}>
+
+            </div>
             </div>
           </div>
         </div>
