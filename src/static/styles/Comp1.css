@@ -87,6 +87,8 @@ h3 {
   margin-top: 10px;
   font-family: "Inter", sans-serif;
   margin-bottom: 0px;
+  overflow: hidden;
+  white-space:nowrap;
   font-weight: "Semi-Bold";
 }
 
