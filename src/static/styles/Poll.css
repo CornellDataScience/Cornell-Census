@@ -1,0 +1,66 @@
+
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.grad {
+  background-image: linear-gradient(to bottom, #1976d2, #98acf8);
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+
+p {
+  font-size: 25px;
+}
+
+.upper {
+  color: white;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.react-select-div {
+  color: black;
+  font-size: 30px;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.card-zt {
+  box-shadow: 0 1% 1% rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+  margin: 1%
+}
+
+.card-gr {
+  margin: 2%;
+  justify-content: center;
+}
+
+.CenterTitle {
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+
+.right-upper {
+  display: inline-block;
+  float: right;
+  margin-top: 75px;
+  margin-right: 10%;
+  vertical-align: center;
+  color: black;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: -5px;
+  background-color: white;
+  border-radius: 25px;
+  text-align: center;
+}

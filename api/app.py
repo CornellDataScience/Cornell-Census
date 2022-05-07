@@ -15,6 +15,7 @@ prof_file = "./data/professor_list.csv"
 course_abbrev = "./data/courses.csv"
 course_medians = "./data/coursemedians.csv"
 gym_file = "./data/gym_list.csv"
+poll_file = "./data/polls.csv"
 
 def readgymfromCSV(csv_file):
     try:
@@ -36,7 +37,6 @@ def readgymfromCSV(csv_file):
         print("I/O error")
 
 gym_list = readgymfromCSV(gym_file)
-print(gym_list)
 
 def readproffromCSV(csv_file):
     try:
@@ -85,6 +85,23 @@ def medianInfo():
         if courseAbbrev in mI['Dept']:
             allInfo.append([mI['Dept'], mI['Professor'], mI['Median Grade'], mI['Semester'], mI['# of Students']])
     return {'allInfo' : allInfo}
+
+def readpollfromCSV(csv_file):
+    try:
+        with open(csv_file) as f:
+            lst = []
+            csv_reader = csv.DictReader(f)
+            for prof in csv_reader:
+                lst.append(dict(prof))
+            return {'poll_list' : lst}
+    except IOError:
+        print("I/O error")
+
+poll_list = readpollfromCSV(poll_file)['poll_list']
+
+@app.route('/get_polls', methods=['GET'])
+def getPoll():
+    return {'pollInfo' : poll_list}
 
 import random
 

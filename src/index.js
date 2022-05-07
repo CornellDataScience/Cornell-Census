@@ -16,6 +16,7 @@ import Professors from "./pages/Professors";
 import ProfessorRanking from "./components/Professor/ProfessorRanking";
 import BestProfessors from "./components/Professor/BestProfessors";
 import WorstProfessors from "./components/Professor/WorstProfessors";
+import Poll from "./pages/Poll";
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/professorranking" element={<ProfessorRanking />}></Route>
         <Route path="/50best" element={<BestProfessors />}></Route>
         <Route path="/50worst" element={<WorstProfessors />}></Route>
+        <Route path="/poll" element={<Poll />}></Route>
       </Routes>
     </BrowserRouter>
   );
