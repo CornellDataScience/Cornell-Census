@@ -13,7 +13,7 @@ function Gym() {
 
  
   useEffect(() => {
-    fetch('/pull_gyms').then(res => res.json()).then(data => {
+    fetch('https://census-backend.herokuapp.com/pull_gyms').then(res => res.json()).then(data => {
       setGymData(data.gym_list);
       setLine(<Line gym_data={data.gym_list}></Line>)
     });

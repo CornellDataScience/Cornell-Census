@@ -9,7 +9,7 @@ const Comp1 = () => {
   let [optionItems=["CS 1110", "CS 2110", "CS 3110", "CS 3410", "CS 4820", "CS 4410"], setOptionItems] = useState();
   const [optionItems2=["A-", "B+", "B", "B-", "A", "A-"], setOptionItems2] = useState();
   useEffect(() => {
-    fetch('/get_median_home').then(res => res.json()).then(data => {
+    fetch('https://census-backend.herokuapp.com/get_median_home').then(res => res.json()).then(data => {
       const AS=data.retCourseInfo
       console.log(AS);
       setOptionItems(AS.map((info) => <p>{info[0]}</p>));

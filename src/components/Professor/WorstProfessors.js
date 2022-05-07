@@ -18,7 +18,7 @@ const WorstProfessors = () => {
     
 
     useEffect(() => {
-      fetch('/get50worst').then(res => res.json()).then(data => { //style={ count === 1 || count === 2 || count === 0 ? { fontSize : "60px" } : null}
+      fetch('https://census-backend.herokuapp.com/get50worst').then(res => res.json()).then(data => { //style={ count === 1 || count === 2 || count === 0 ? { fontSize : "60px" } : null}
         const AS=data.get50worst
         setOptionItems(AS.sort().map((professor, count) => <option style={ count === 1 || count === 2 || count === 0 ? { fontSize : "50px", paddingBottom : "10px" } : {fontSize : "30px", paddingBottom : "5px"}} key={professor}>{count+1}. {professor[1]} ({professor[0]})</option>));
       });
@@ -28,7 +28,7 @@ const WorstProfessors = () => {
     const handleChange = (e) => {
       setInfo(e.target.value)
       const params = {c:e.target.value}
-      fetch(`/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
+      fetch(`https://census-backend.herokuapp.com/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
           setRating(data.rating); setReview(data.review);
       })
     }

@@ -18,7 +18,7 @@ const ProfessorRanking = () => {
     
 
     useEffect(() => {
-      fetch('/all_professors2').then(res => res.json()).then(data => {
+      fetch('https://census-backend.herokuapp.com/all_professors2').then(res => res.json()).then(data => {
         const AS=data.all_professors2
         setOptionItems(AS.sort().reverse().map((professor) => <option key={professor}>{professor[1]} ({professor[0]})</option>));
       });
@@ -28,7 +28,7 @@ const ProfessorRanking = () => {
     const handleChange = (e) => {
       setInfo(e.target.value)
       const params = {c:e.target.value}
-      fetch(`/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
+      fetch(`https://census-backend.herokuapp.com/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
           setRating(data.rating); setReview(data.review);
       })
     }

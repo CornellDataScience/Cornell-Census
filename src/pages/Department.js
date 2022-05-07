@@ -19,7 +19,7 @@ const Department = () => {
 
  
     useEffect(() => {
-      fetch('/all_subjects').then(res => res.json()).then(data => {
+      fetch('https://census-backend.herokuapp.com/all_subjects').then(res => res.json()).then(data => {
         const AS = data.all_subjects
         setOptionItems(AS.map((subject) => <option key={subject}>{subject}</option>));
       });
@@ -38,10 +38,10 @@ const Department = () => {
       allClass = new Array(100);
       setInfo(e.target.value)
       const params = {c:e.target.value}
-      fetch(`/get_abbrev?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
+      fetch(`https://census-backend.herokuapp.com/get_abbrev?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
           setAbbrev(data.abb);
           const params2 = {cA:data.abb}
-          fetch(`/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
+          fetch(`https://census-backend.herokuapp.com/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
             const med_info = data.allInfo;
             allClass = data.allInfo;
             setCardItems(med_info.map((info, index) => 

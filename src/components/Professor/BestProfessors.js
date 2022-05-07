@@ -28,7 +28,7 @@ const BestProfessors = () => {
     const handleChange = (e) => {
       setInfo(e.target.value)
       const params = {c:e.target.value}
-      fetch(`/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
+      fetch(`https://census-backend.herokuapp.com/pull_rating?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
           setRating(data.rating); setReview(data.review);
       })
     }
