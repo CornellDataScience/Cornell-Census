@@ -29,10 +29,9 @@ function Explore() {
                 <strong><p className="div-title">Professors</p></strong>
                 <a href="/50best"><p>View 50 Highest Rated Cornell Professors</p></a>
                 <a href="/50worst"><p>View 50 Worst Rated Cornell Professors</p></a>
-                <p>David Han</p>
+                <a href="/professorranking"><p>View All Professors By Rating</p></a>
             </div>
             <div className="contents-right">
-            <a href="/professorranking"><strong><p>Sort By Rating</p></strong></a> 
             <a href="/professors"><strong><p>See All Professors</p></strong></a>
             </div>
         </div>

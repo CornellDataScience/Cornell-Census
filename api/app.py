@@ -207,6 +207,20 @@ def GetAllProfessors():
             profList.append([n, prof['overall_rating'], prof['review']])
     return {'all_professors' : profList}
 
+@app.route('/all_professors_home', methods=['GET'])
+def GetAllProfessorsHome():
+    profList = []
+    for prof in prof_list:
+        n = prof['tFname'] + ' ' + prof['tLname']
+        rev = prof['review']
+        rat = prof['overall_rating']
+        if n not in profList and rev != "" and rat != "" and rat != "N/A" and n[0] != "." and n[1] != "." and len(rev) >= 200:
+            profList.append([n, prof['overall_rating'], prof['review']])
+    k = random.randint(0, len(profList)-1)
+    profList3 = [profList[k], profList[k+1], profList[k+2]]
+        
+    return {'all_professors_home' : profList3}
+
 
 @app.route('/pull_rating', methods=['GET'])
 def pullRating():

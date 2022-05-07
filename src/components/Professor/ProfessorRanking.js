@@ -41,6 +41,9 @@ const ProfessorRanking = () => {
           <Navbar />
           <div className="grad">
             <div className="upper">
+            <div className="CenterTitle">
+                <strong><p className="centerText">Cornell Professors By Rating</p></strong>
+              </div>
             <div>
                 <p>{optionItems}</p>
         	</div>
