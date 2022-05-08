@@ -77,7 +77,7 @@ const Department = () => {
             <br></br>
             <div>
               {donut}
-              <br></br><br></br>
+
               <div className="upper"><h2>All Classes</h2></div>
               <Row className="card-gr" xs={3} md={4}>
                   {cardItems}

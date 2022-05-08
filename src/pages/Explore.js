@@ -2,6 +2,9 @@ import '../static/styles/master.css';
 import '../static/styles/Explore.css';
 import Nvbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import square from '../static/img/temp_square.png';
 
 
 function Explore() {
@@ -10,47 +13,35 @@ function Explore() {
     <div>
       <Nvbar />
       <div className="grad">
-        <strong><p className="teamP">Explore Cornell Census</p></strong>
-        <div className="cont1">
-            <div className="contents-left">
-                <strong><p className="div-title">Courses</p></strong>
-                <p>CS 3410</p>
-                <p>CS 3110</p>
-                <p>CS 2112</p>
-            </div>
-            <div className="contents-right">
-            <a href="/department"><strong><p>See All Courses</p></strong></a>
-            </div>
-        </div>
-        <br></br>
+        <h1 className="upper">Explore Cornell Census</h1>
+        <Row className="card-gr" xs={2} md={3}>
+          <Card className="card-zt"><br></br>
+            <Card.Title><h2>Courses</h2></Card.Title> 
+            <img src={square} width={200}></img>
+            
+            <a href="/department"><strong><p className="discover2">See All Courses</p></strong></a>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title><h2>Professors</h2></Card.Title>
+          <img src={square} width={200}></img>
+          <Row className="alty" xs ={3}>
+          <a href="/50best"><strong><p className="discover2">Top 50</p></strong></a>
+          <a href="/50worst"><strong><p className="discover2">Bot 50</p></strong></a>
+          <a href="/professorranking"><strong><p className="discover2">Sorted</p></strong></a>
+          </Row>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title><h2>Gym</h2></Card.Title>
+          <img src={square} width={200}></img>
+          <a href="/gym"><strong><p className="discover2">See Gym Data</p></strong></a>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title><h2>Polls</h2></Card.Title>
+          <img src={square} width={200}></img>
+          <a href="/poll"><strong><p className="discover2">See All Polls</p></strong></a>
+          </Card>
+        </Row>
 
-        <div className="cont1">
-            <div className="contents-left">
-                <strong><p className="div-title">Professors</p></strong>
-                <a href="/50best"><p>View 50 Highest Rated Cornell Professors</p></a>
-                <a href="/50worst"><p>View 50 Worst Rated Cornell Professors</p></a>
-                <a href="/professorranking"><p>View All Professors By Rating</p></a>
-            </div>
-            <div className="contents-right">
-            <a href="/professors"><strong><p>See All Professors</p></strong></a>
-            </div>
-        </div>
-
-        <br></br>
-
-        <div className="cont1">
-          <div className="contents-left">
-            <strong><p className="div-title">Gym Occupancies</p></strong>
-            <p>Gym 1</p>
-            <p>Gym 2</p>
-            <p>Gym 3</p>
-          </div>
-          <div className="contents-right">
-            <a href="/gym"><strong><p>See All Gyms</p></strong></a>
-          </div>
-        </div>
-
-        <br></br>
         <div className="cds">
           In collaboration with Cornell Data Science.
           <Footer />

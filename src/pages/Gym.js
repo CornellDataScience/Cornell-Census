@@ -23,6 +23,9 @@ function Gym() {
     <div>
       <Nvbar />
       <div className="grad">
+        <div className="upper">
+          <h1>Gym Trends</h1>
+        </div>
         {line}
         <br></br>
         <div className="cds">

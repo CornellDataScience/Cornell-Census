@@ -4,21 +4,15 @@
   margin: 0 auto;
   border-radius: 50px;
 }
-
-.contents-left {
-  padding-left: 5%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-family: "Inter", sans-serif;
-  display: inline-block;
+h1 {
+  font-size: 70px;
 }
 
-.contents-right {
-  float: right;
-  padding-top: 23%;
-  padding-right: 5%;
+.upper {
+  color: white;
+  padding-top: 50px;
+  text-align: center;
 }
-
 .div-title {
   font-size: 50px;
 }
@@ -32,4 +26,33 @@
 
 .cds {
   background-color: transparent;
+}
+
+.card-zt {
+  box-shadow: 0 1% 1% rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+  margin: 1%;
+
+}
+
+.card-gr {
+  margin: 1%;
+  justify-content: center;
+}
+
+.alty{
+  justify-content: center;
+  width: 100%;
+}
+
+.discover2 {
+  color: #1976d2;
+  background-color: white;
+  text-align: center;
+  vertical-align: center;
+  overflow: visible;
+}
+
+.sizet {
+  font-size: 90px;
 }

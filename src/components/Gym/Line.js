@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Chart from 'react-apexcharts';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
 
 const Line = ({gym_data}) => {
+
+    const hLabel = ["HNH Court 1", "HNH Court 2", "Helen Newman Fitness Center","Noyes Fitness Center",
+    "Teagle Down Fitness Center", "Teagle Up Fitness Center","Toni Morrison Fitness Center"]
 
     const allD = new Array();
     const tLabel = ["6:00pm","7:00pm","8:00pm","9:00pm","10:00pm","11:00pm","12:00am",
@@ -22,35 +27,122 @@ const Line = ({gym_data}) => {
       }
       allD.push(gym1)
     }
-    console.log(gym_data)
+
     var hnhc1 = {
       options: {
         xaxis: {
           categories: timeLabel,
           tickAmount: 24,
         },
-        labels: ["HNH Court 1", "HNH Court 2", "Helen Newman Fitness Center","Noyes Fitness Center",
-      "Teagle Down Fitness Center", "Teagle Up Fitness Center","Toni Morrison Fitness Center"]
+        markers: {
+          size: 2
+        },
+        colors: ["#122C91"]
       },
       series: [{
+        name: hLabel[0],
         type: 'line',
         data: allD[0]
-      }, {
+      }]
+    }
+    var hnhc2 = {
+      options: {
+        xaxis: {
+          categories: timeLabel,
+          tickAmount: 24,
+        },
+        markers: {
+          size: 2
+        },
+        colors: ["#E74645"]
+      },
+      series: [{
+        name: hLabel[1],
         type: 'line',
         data: allD[1]
-      },{
+      }]
+    }
+    var hnfc = {
+      options: {
+        xaxis: {
+          categories: timeLabel,
+          tickAmount: 24,
+        },
+        markers: {
+          size: 2
+        },
+        colors: ["#FB7756"]
+      },
+      series: [{
+        name: hLabel[2],
         type: 'line',
         data: allD[2]
-      },{
+      }]
+    }
+    var nfc = {
+      options: {
+        xaxis: {
+          categories: timeLabel,
+          tickAmount: 24,
+        },
+        markers: {
+          size: 2
+        },
+        colors: ["#FACD60"]
+      },
+      series: [{
+        name: hLabel[3],
         type: 'line',
         data: allD[3]
-      },{
+      }]
+    }
+    var tdfc = {
+      options: {
+        xaxis: {
+          categories: timeLabel,
+          tickAmount: 24,
+        },
+        markers: {
+          size: 2
+        },
+        colors: ["#FDFA66"]
+      },
+      series: [{
+        name: hLabel[4],
         type: 'line',
         data: allD[4]
-      },{
+      }]
+    }
+    var tufc = {
+      options: {
+        xaxis: {
+          categories: timeLabel,
+          tickAmount: 24,
+        },
+        markers: {
+          size: 2
+        },
+        colors: ["#1AC0C6"]
+      },
+      series: [{
+        name: hLabel[5],
         type: 'line',
         data: allD[5]
-      },{
+      }]
+    }
+    var tmfc = {
+      options: {
+        xaxis: {
+          categories: timeLabel,
+          tickAmount: 24,
+        },
+        markers: {
+          size: 2
+        },
+        colors: ["#FF4D4D"]
+      },
+      series: [{
+        name: hLabel[6],
         type: 'line',
         data: allD[6]
       }]
@@ -58,7 +150,36 @@ const Line = ({gym_data}) => {
 
     return (
         <div>
-         <Chart options={hnhc1.options} series={hnhc1.series} type="line" width="1500" height = "800" />
+          <Row className="card-gr" xs={3}>
+          <Card className="card-zt"><br></br>
+            <Card.Title>{hLabel[0]}</Card.Title>
+          <Chart options={hnhc1.options} series={hnhc1.series} type="line" height={350} width={500}/>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title>{hLabel[1]}</Card.Title>
+          <Chart options={hnhc2.options} series={hnhc2.series} type="line" height={350} width={500}/>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title>{hLabel[2]}</Card.Title>
+          <Chart options={hnfc.options} series={hnfc.series} type="line" height={350} width={500}/>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title>{hLabel[3]}</Card.Title>
+          <Chart options={nfc.options} series={nfc.series} type="line" height={350} width={500}/>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title>{hLabel[4]}</Card.Title>
+          <Chart options={tdfc.options} series={tdfc.series} type="line" height={350} width={500}/>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title>{hLabel[5]}</Card.Title>
+          <Chart options={tufc.options} series={tufc.series} type="line" height={350} width={500}/>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title>{hLabel[6]}</Card.Title>
+          <Chart options={tmfc.options} series={tmfc.series} type="line" height={350} width={500}/>
+          </Card>
+          </Row>
         </div>
 
     );

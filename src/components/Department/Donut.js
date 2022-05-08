@@ -40,11 +40,11 @@ const Donut = ({checks, classes}) => {
     return (
       <div className="rowG">
          <div className="outlinez">
-          <div className="upper"><h3>Median Grades</h3></div> 
+          <div className="upper2"><h3>Median Grades</h3></div> 
          <Chart options={gradeDonut.options} series={gradeDonut.series} type="donut" width="400" />
         </div>
         <div className="outlinez">
-        <div className="upper"><h3>Class Level</h3></div> 
+        <div className="upper2"><h3>Class Level</h3></div> 
         <Chart options={classLDonut.options} series={classLDonut.series} type="donut" width="400" />
         </div>
       </div>
