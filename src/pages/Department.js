@@ -70,15 +70,15 @@ const Department = () => {
           <Navbar />
           <div className="grad">
             <div className="upper">
-              <h1>{departmentName}</h1>
-              <h1>{abbrev}</h1>
+            <strong><p style={{fontSize:"60px"}}>{departmentName}</p></strong>
+            <strong><p style={{}}>{abbrev}</p></strong>
               <div><select onChange={e => handleChange(e)} className='react-select-div'>{optionItems}</select></div>
             </div>
             <br></br>
             <div>
               {donut}
 
-              <div className="upper"><h2>All Classes</h2></div>
+              <div className="upper"><strong><p style={{}}>All Classes:</p></strong></div>
               <Row className="card-gr" xs={3} md={4}>
                   {cardItems}
               </Row>

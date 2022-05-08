@@ -3,10 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const Comp3 = () => {
   let [professors=["Michael Clarkson", "David Gries", "Walker White"], setProfessors] = useState();
-  const [reviews=["A-", "B+", "B", "B-", "A", "A-"], setReviews] = useState();
-  const prof1 = 1;//Math.floor(Math.random() * (1000));
-  const prof2 = 2;//Math.floor(Math.random() * (1000));
-  const prof3 = 3;//Math.floor(Math.random() * (1000));
+  const [reviews=["Love Him!", "He is amazing!", "He is my favorite professor!!"], setReviews] = useState();
   useEffect(() => {
     fetch('/all_professors_home').then(res => res.json()).then(data => {
       const AS=data.all_professors_home

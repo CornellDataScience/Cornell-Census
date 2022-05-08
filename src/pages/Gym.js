@@ -24,7 +24,7 @@ function Gym() {
       <Nvbar />
       <div className="grad">
         <div className="upper">
-          <h1>Gym Trends</h1>
+        <strong><p style={{fontSize:"70px"}}>Gym Trends</p></strong>
         </div>
         {line}
         <br></br>

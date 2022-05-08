@@ -152,31 +152,31 @@ const Line = ({gym_data}) => {
         <div>
           <Row className="card-gr" xs={3}>
           <Card className="card-zt"><br></br>
-            <Card.Title>{hLabel[0]}</Card.Title>
+            <Card.Title><strong><p style={{paddingTop:"15px"}}>{hLabel[0]}</p></strong></Card.Title>
           <Chart options={hnhc1.options} series={hnhc1.series} type="line" height={350} width={500}/>
           </Card>
           <Card className="card-zt"><br></br>
-          <Card.Title>{hLabel[1]}</Card.Title>
+          <Card.Title><strong><p style={{paddingTop:"15px"}}>{hLabel[1]}</p></strong></Card.Title>
           <Chart options={hnhc2.options} series={hnhc2.series} type="line" height={350} width={500}/>
           </Card>
           <Card className="card-zt"><br></br>
-          <Card.Title>{hLabel[2]}</Card.Title>
+          <Card.Title><strong><p style={{paddingTop:"15px"}}>{hLabel[2]}</p></strong></Card.Title>
           <Chart options={hnfc.options} series={hnfc.series} type="line" height={350} width={500}/>
           </Card>
           <Card className="card-zt"><br></br>
-          <Card.Title>{hLabel[3]}</Card.Title>
+          <Card.Title><strong><p style={{paddingTop:"15px"}}>{hLabel[3]}</p></strong></Card.Title>
           <Chart options={nfc.options} series={nfc.series} type="line" height={350} width={500}/>
           </Card>
           <Card className="card-zt"><br></br>
-          <Card.Title>{hLabel[4]}</Card.Title>
+          <Card.Title><strong><p style={{paddingTop:"15px"}}>{hLabel[4]}</p></strong></Card.Title>
           <Chart options={tdfc.options} series={tdfc.series} type="line" height={350} width={500}/>
           </Card>
           <Card className="card-zt"><br></br>
-          <Card.Title>{hLabel[5]}</Card.Title>
+          <Card.Title><strong><p style={{paddingTop:"15px"}}>{hLabel[5]}</p></strong></Card.Title>
           <Chart options={tufc.options} series={tufc.series} type="line" height={350} width={500}/>
           </Card>
           <Card className="card-zt"><br></br>
-          <Card.Title>{hLabel[6]}</Card.Title>
+          <Card.Title><strong><p style={{paddingTop:"15px"}}>{hLabel[6]}</p></strong></Card.Title>
           <Chart options={tmfc.options} series={tmfc.series} type="line" height={350} width={500}/>
           </Card>
           </Row>

@@ -34,7 +34,7 @@ const Poll = () =>  {
       <Navbar />
       <div className="grad">
         <div className="upper">
-          <h1>Current Polls</h1>
+          <strong><p style={{fontSize:"70px"}}>Current Polls</p></strong>
         </div>
         <Row className="card-gr" xs={2} md={3}>
             {pollItem}
